@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | M. S. Santhanam</title>
+    <meta name="description" content="Detailed research areas of Prof. M. S. Santhanam at IISER Pune">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .research-page-content {
+            padding: 8rem 0;
+        }
+
+        .research-section {
+            margin-bottom: 6rem;
+            max-width: 800px;
+        }
+
+        .research-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: var(--text);
+            position: relative;
+        }
+
+        .research-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .research-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .research-section em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .back-home:hover {
+            color: var(--accent);
+        }
+
+        .back-home svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Santhanam</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#research">Research</a>
+                <a href="index.html#work">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="research-page-content">
+        <div class="container">
+            <a href="index.html" class="back-home">
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                </svg>
+                <span>Back to Home</span>
+            </a>
+
+            <div class="section-intro">
+                <span class="section-tag">Deep Dive</span>
+                <h1>Research Investigation</h1>
+            </div>
+
+            <!-- Quantum Classical Correspondence -->
+            <section class="research-section" id="quantum-chaos">
+                <h2>Quantum Classical Correspondence</h2>
+                <p>Classically chaotic systems display sensitive dependence on initial conditions. Many physical systems
+                    such as the driven and damped pendulum, atoms in strong magnetic fields, nonlinearly coupled
+                    oscillators and periodically driven rotors exhibit this property. Chaos, of course, pervades
+                    anything from weather to perhaps even stock market dynamics.</p>
+                <p>The quantum dynamics of such systems do not display dependence on initial conditions. One recurring
+                    theme of my research is to explore and understand the manifestations of classical chaos in the
+                    quantum dynamics. In particular, interest is focussed on how the rich variety in classical dynamical
+                    structures affect the quantum spectra. Recently, we had studied <em>quantum-classical
+                        correspondence</em> in a non-KAM system.</p>
+            </section>
+
+            <!-- Localisation -->
+            <section class="research-section" id="localisation">
+                <h2>Chaos, Quantum Localisation and Interactions</h2>
+                <p>The interplay between chaotic dynamics, localisation and interactions is of special interest
+                    especially in the context of driven quantum systems. Kicked rotor, a pendulum periodically kicked by
+                    an external potential, is a prominent and well studied chaotic system. We study different variants
+                    of kicked rotor that throw light on the connections between the quantum dynamical localization, a
+                    variant of the Anderson localization, and classical (sub-)diffusion. We recently wrote a detailed
+                    review article on <em>Quantum kicked rotor and its variants: Chaos, localization and beyond</em> in
+                    Physics Reports (2022).</p>
+                <p>In a recent work that combines theory, numerics and cold atoms experiment, we have shown how specific
+                    manipulation of kick sequence imparted to a rotor can lead to <em>control of quantum
+                        decoherence</em>, which shows up as a decay of localization.</p>
+                <p>In general, the role of interactions and how they affect localization properties in chaotic and
+                    many-body systems is explored. The physical systems of interest range from coupled kicked rotors and
+                    kicked tops to quantum spin-chains.</p>
+            </section>
+
+            <!-- Random Matrices -->
+            <section class="research-section" id="random-matrices">
+                <h2>Random Matrix Spectra</h2>
+                <p>Random matrix theory (RMT) is widely used in physics (in condensed matter physics, nuclear physics
+                    etc.) to understand the spectral signatures of complex quantum systems and as a qualitative
+                    indicator of underlying classical dynamics. RMT is extensively applied in the study of chaotic
+                    quantum systems. Recently, we had obtained a <em>series of results</em> for the higher order spacing
+                    ratio distributions in random matrix theory and complex quantum systems.</p>
+            </section>
+
+            <!-- Quantum ML -->
+            <section class="research-section" id="quantum-ml">
+                <h2>Quantum Computing and Machine Learning</h2>
+                <p>Quantum computer is expected to speed-up certain class of problems, the prime factorisation being one
+                    such example. One of the central resource for a quantum computer is the quantum entanglement. Our
+                    research is focussed on studying entanglement (and more generally quantum correlational properties,
+                    and curiously, to understand how it is affected by classical dynamics in the case of chaotic and
+                    many-body systems.</p>
+                <p>Another exciting area of interest we are starting on is the quantum machine learning (QML). Many
+                    machine learning tasks can possibly benefit from their quantised versions. With the advent of real
+                    quantum computers, we might actually be able to implement QML algorithms in some years. This has
+                    both fundamental and practical benefits.</p>
+            </section>
+
+            <!-- Complex Networks -->
+            <section class="research-section" id="networks">
+                <h2>Complex Networks</h2>
+                <p>Has emerged as a unified framework to study many complex systems, ranging from stock markets to
+                    biological processes. We are mainly interested in the dynamical processes on networks, their
+                    properties and the interplay between network structure and dynamics on networks. The dynamical
+                    processes that we study can range from random walks to coupled chaotic systems. These are relevant
+                    for many transport processes on networks and also for such applications as web search engines and
+                    online recommender systems.</p>
+            </section>
+
+            <!-- Extreme Events -->
+            <section class="research-section" id="extreme-events">
+                <h2>Extreme Events</h2>
+                <p>Extreme events are an interesting emergent phenomena in complex systems. Floods, droughts, traffic
+                    jams, mobile congestion are some of the commonly encountered extreme events. Unlike floods and
+                    droughts, the latter two are examples of extreme events taking place on networks. The aim is to not
+                    only understand the properties of extreme events on networks but also explore the possibility of
+                    controlling them.</p>
+                <p>Our research in the context of random walks on networks has showed a rather counter-intuitive
+                    property that extreme events are more likely to take place on small degree nodes of a network than
+                    on hubs.</p>
+            </section>
+
+            <!-- Complex Systems -->
+            <section class="research-section" id="complex-systems">
+                <h2>Complex Systems / Data Science</h2>
+                <p>Since the last few decades, principles of physics are beginning to be applied to areas outside of it.
+                    Econophysics is one such area that represents an application of principles of physics, especially
+                    statistical physics, to some problems of financial markets. Here, our efforts are directed towards
+                    understanding larger organising principles of complex systems. One of our recent works was to study
+                    <em>record statistics of financial data</em> in the context of geometric random walks.
+                </p>
+                <p>Since the pandemic began in 2020, we used extensive mobility data in India to create an
+                    <em>infectious diseases hazard map</em>.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-inner fade-in">
+                <div class="contact-text">
+                    <span class="section-tag">Contact</span>
+                    <h2>Get in Touch</h2>
+                    <p>Interested in collaboration or have questions about research?</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-row">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:santh@iiserpune.ac.in">santh@iiserpune.ac.in</a>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-label">Socials</span>
+                        <div class="contact-socials">
+                            <a href="https://www.researchgate.net/profile/M-S-Santhanam"
+                                target="_blank">ResearchGate</a>
+                            <span class="sep">/</span>
+                            <a href="https://www.linkedin.com/in/m-s-santhanam-9a0a1b1b/" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-credit">—web // imagined by <strong><a href="https://ritampal.com"
+                        target="_blank">ritam</a></strong></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
