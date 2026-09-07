@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SERB School on Nonlinear Dynamics : Computer Exercises </title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['<br><br>(','<br><br>)']]}});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+</head>
+<body>
+
+<h2> SERC School on Nonlinear Dynamics (December 2016) </h2>
+<h3> Computer Lab Exercise </h3>
+<a href="http://www.iiserpune.ac.in/~santh">M. S. Santhanam</a>
+<br><br><br>
+<hr>
+<i>
+These are problems prepared for the SERB Schools on Nonlinear Dynamics.
+
+All the problems given here require use of computers. You can choose the
+programming language of your choice. The problems are roughly in the
+increasing order of difficulty. Some of these problems have been taken
+from standard nonlinear dynamics text books. You are encouraged to try as many
+as possible. Some useful resources and books are listed at the end of this web page. <br>
+A slightly modified version of this problem set is available in <a href="serc_nld_2016.pdf">PDF format.</a>
+</i>
+<br>
+<hr>
+
+<h3> <b> <font color="blue"> Basic </font> </b> </h3>
+
+1. For the map $x_{n+1} = x_n^2$, with $0 \le x_n \le \infty$ try the following; <br>
+(a) Compute and plot $x_n$ vs. $n$ with $x_0=0.8$ and with $x_0=1.9$. If you wish, you
+can try with any other value of $x_0$ as well. <br>
+(b) Based on the plot obtained in (a), identify the fixed points for the map. <br>
+(c) What can be said about the stability of the fixed points based on the plotted results in (a). <br><br>
+
+Solution : <a href="problem1.f">fortran</a> and <a href="problem1.c">C</a>
+<br><br>
+
+
+2. For the differential equation $\dot{x}= \sin x$, do the following;<br>
+(a) What additional information is needed to obtain $x(t)$ numerically on the computer ? <br>
+(b) Once you figured out (a), use 2nd order Euler's method to compute the solution $x(t)$.<br>
+(c) Plot the computed solution  and the exact analytical solution.
+Verify if they agree with one another. <br> <br>
+
+Solution : <a href="problem2.f">fortran</a> and <a href="problem2.c">C</a>
+<br><br>
+
+3. Obtain numerical solutions to the system in problem (2) using the 2nd order Euler's method
+using step sizes $h=0.1, 0.01, 0.001$. You can try other step sizes as well. <br>
+What do you expect from computed solutions with these step sizes. Verify if the computed
+results are consistent with the error expected from Euler's method. <br> <br>
+
+4. Obtain numerical solutions to the system in problem (2) using the 4th order
+Runge-Kutta method. Plot the numerical solutions obtained by Euler's method and RK method.
+Which of them is better ? How will you figure out the accuracy of these solutions ? <br> <br>
+
+Solution : <a href="problem4.f">fortran</a>.
+<br><br>
+
+
+5. Generate 5000 random numbers using <code> ran() </code> or <code> rand() </code> (or any other
+such function call) provided in your system. <br>
+(a) Plot the random number sequence. <br>
+(b) Numerically compute and plot the distribution of random numbers.
+What do you infer from this plot ? <br>
+(c) Compute and plot the autocorrelation function ? What do you infer from this plot ? <br> <br>
+
+6. Compute the machine epsilon for your computer in single and double precision.
+Machine epsilon is the smallest number when added to 1 gives a result different from 1.
+This is related to how the computers store floating point numbers. This exercise should
+be done using Fortran, C or C++ etc. In particular, do not use Matlab
+or Mathematica for this problem. Figure out why Matlab or Mathematica should not be used in this case ? <br> <br>
+
+<h3> <b> <font color="blue"> Intermediate </font> </b> </h3>
+
+7. Consider the Logistic map
+\[
+x_{n+1} = \mu x_n (1-x_n)
+\]
+(a) Compute and plot the trajectory $x_n$ as a function of $n=1,2,3......5000$ for several choices of $\mu$. <br>
+(b) Compute and plot the bifurcation diagram as a function of the parameter $\mu$. <br>
+(c) Compute and plot the invariant density for the logistic map at $\mu=4$. Compare it with
+the analytical result for the invariant density. <br><br>
+
+Solution : <a href="problem7.f">fortran</a> and in C for <a href="problem7a.c">7(a)</a> and <a href="problem7c.c">7(c)</a>
+<br><br>
+
+8. Consider the logistic equation
+\[
+\frac{dx}{dt} = \mu x (1-x).
+\]
+Solve this equation using Euler's or RK4 method for $\mu=4$. Take $x(0)=0.2$.
+Compare the trajectories of logistic equation and logistic map at $\mu=4$. <br><br>
+
+9. Compute the Lyapunov exponent for the logistic map for various values
+of the parameter $\mu$. See section 9.3 of Hilborn's book for one possible way of
+calculating the Lyapunov exponent. Compare the result with the bifurcation
+diagram in the same range of parameter. <br><br>
+
+10. Compute the solutions for tent map (with $\mu=1.1, 2.0$) given by
+\begin{eqnarray}
+x_{n+1} & = & \mu x_n \;\;\;\;\;\;\;\;\;\;\;\;\;\; (x_n < 1/2),  \nonumber \\
+        & = & \mu (1-x_n), \;\;\;\;\; (x_n \ge 1/2). \nonumber
+\end{eqnarray}
+Use the procedure in question 8 (from Ref. [1]) to compute the Lyapunov exponent
+for tent map and circle map. <br><br>
+
+11. For the logistic map in problem 1, compute $x_n$ as a function of $n=1,2,3......10000$
+at $\mu=2.0, 3.25,4.0$. Compute and plot the power spectrum of $x_n$. What can you infer
+from the power spectrum and how does it correlate with the bifurcation diagram and the qualitative
+dynamics of logistic map. <br><br>
+
+12. For the system given by,
+\begin{eqnarray}
+\dot{x} & = & \mu x + y - x^3  \nonumber \\
+\dot{y} & = & -x + \mu y + 2 y^3, \nonumber
+\end{eqnarray}
+where $\mu$ is a parameter, use numerics to show that $\mu=0$ is a Hopf bifurcation and
+classify it as subcritical or supercritical ? <br><br>
+
+13. Compute the solutions of
+\[
+\ddot{x} + \omega^2 x = 0
+\]
+with $\omega=2$ and initial condition $x(0)=0$ and $\dot{x}(0)=1$.
+(a) Plot $x(t)$ for $t \in [0,4 \pi]$. <br>
+(b) Plot the phase space for this system. <br>
+(c) Plot $E=\dot{x}^2 + \omega^2 x^2$ as a function of $t$ and verify that
+it is a conserved quantity. <br> <br>
+
+14.  Do the problem (12) in single and double precision and
+see its effect on how well $E$ is conserved as a function of time.
+By using any algorithm of your choice, control the growth of
+error such that $E$ is conserved correct to at least 6 decimal places.<br><br>
+
+15. Consider the Lorenz system with parameters $(\sigma,r,b)$ ;
+\begin{eqnarray}
+\dot{x} & = & -\sigma x + \sigma y \nonumber \\
+\dot{y} & = & -xz + r x - y \nonumber \\
+\dot{z} & = & x y - b z \nonumber
+\end{eqnarray}
+(a) Obtain the Jacobian matrix by linearising
+around the fixed point $(x^{*}, y^{*}, z^{*})$.<br>
+(b) Numerically compute the eigenvalues of the Jacobian matrix for the case
+with $(x^{*}=\sqrt{b(r-1)}, y^{*}=\sqrt{b(r-1)}, z^{*}=r-1)$. Take the
+parameter set to be $(10, 35, 2.666)$.<br>
+(c) What do you infer about the stability of Lorenz system in the vicinity
+of this fixed point. <br> <br>
+
+<h3> <b> <font color="blue"> Advanced </font> </b> </h3>
+16. Sketch the bifurcation diagram, determine stability of the branches, detect and
+classify all bifurcations and find the bifurcation points of
+\[
+\dot{x}=(r - x^2)(10 r -x^4).
+\]
+
+17. Compute the devil's staircase for the circle map
+\[
+\theta_{n+1} = \theta_n + \Omega - \frac{K}{2\pi} \sin 2\pi\theta_n \;\;\;\;\;\;\; \mbox{(mod 1)}
+\]
+for $K=1$. See sections 6.7-6.8 in Hilborn's book [1] as well as the Devil's staricase shown in
+the figure below.<br><br>
+
+<img src="DevilsStaircase.gif" alt="DevilsStairCase">
+<br>
+
+18. For the Henon map given by
+\begin{eqnarray}
+x_{n+1} & = & y_n + 1 - a x_n^2 \nonumber \\
+y_{n+1} & = & b x_n \nonumber
+\end{eqnarray}
+with parameters $a=1.4$ and $b=0.3$, simulate and plot $x_n$ against $y_n$.
+You should verify that you get the Henon attractor.<br><br>
+
+
+19. For the Duffing oscillator given by
+\[
+\ddot{x} + \alpha \dot{x} + x + \beta x^3 = f \sin \omega t
+\]
+compute and plot the trajectories for $f=0.54214, 0.5421, 0.54$ with $\beta=1, \omega=1, \alpha=0.5$.
+Compute the bifurcation diagram for $0.538 < f < 0.544$. See Ref [3] for more details on this system.<br><br>
+
+20. For the Rossler system
+\begin{eqnarray}
+\dot{x}  & = & -y -z \nonumber \\
+\dot{y}  & = & x + a y \nonumber \\
+\dot{z}  & = & b + z(x-c) \nonumber
+\end{eqnarray}
+with $a,b,c$ being the parameters. For $a=0.4, b=2, c=4$, compute and plot
+the attractor. Take a look at the time series $z(t)$. <br> <br>
+
+21.(a) Compute the solutions for the damped and driven nonlinear oscillator
+\[
+\ddot{x} + \alpha \dot{x} + x = f \sin \omega t
+\]
+for the set of parameters $\alpha=0.1, \omega=1,f=0.1$. Compute and
+verify that you get a limit cycle. Use RK-4 method to solve the problem. <br>
+(b) For $\alpha=1$ and $f=0$, compute and verify that you get an attractor
+in phase space. <br><br>
+
+22. Consider the standard map given by
+\begin{eqnarray}
+p_{n+1} & = & p_n + \frac{K}{2\pi} \sin(2\pi x_n)  \nonumber \\
+x_{n+1} & = & x_n + p_{n+1}. \nonumber
+\end{eqnarray}
+Plot the stroboscopic section for this map for $K=0.2, 0.5$ and $K=0.97, 2.0$.
+Relate it to the results of KAM theorem.
+Identify the golden KAM tori in the Poincare section for $K \approx 0.97$. <br><br>
+
+23. Consider the model Hamiltonian
+\[
+H = \frac{p_x^2}{2} + \frac{p_y^2}{2} + \frac{x^2+y^2}{2} + \alpha x^2 y^2.
+\]
+Compute and plot the $x-p_x$ Poincare section for this system with parameter $\alpha=0.1, 0.2$.
+What are the qualitative features about the dynamics that you can infer from the Poincare section.
+Verify that the energy is the conserved quantity for this system. <br><br>
+
+24. Create a real symmetric matrix (of order 1000) with entries drawn from appropriate Gaussian
+distribution. Diagonalise this matrix and compute eigenvalue density and spacing distribution.
+Refer to text book by M. L. Mehta on {\it Random matrices}. <br><br>
+
+
+<hr>
+<font color="red"> Some useful references : </font>
+<br>
+<hr>
+
+[1] <i>Chaos and Nonlinear Dynamics</i>, Robert C. Hilborn, (Oxford, 2000). <br>
+[2] <i>Nonlinear Dynamics: Integrability, Chaos and Patterns, M. Lakshmanan and S. Sahadevan, 
+(Springer, 2003)</i>. <br>
+[3] <i>Nonlinear Dynamics and Chaos</i>, S. Strogatz, (Westview Press, 2001).
+
+<br> <br>
+
+
+
+
+<hr>
+<font color="red"> Some useful resources : </font>
+<br>
+<hr>
+
+<ul style="list-style-type:square">
+<li>A quick primer on <a href="http://web.mit.edu/10.001/Web/Course_Notes/Differential_Equations_Notes/node5.html">
+Runge Kutta methods</a>. One more helpful <a href="http://farside.ph.utexas.edu/teaching/329/lectures/node35.html">
+quick reference for RK methods</a>. </li>
+<li>Quick reference guide for Fortran : <a href="http://www.mie.uth.gr/ekp_yliko/fortran_quick_reference_cheat_crib_sheet.pdf">
+Doc-1</a> and <a href="http://www.ldeo.columbia.edu/~mspieg/mmm/Fortran.pdf">Doc-2</a> </li>
+<li>Quick reference guides for C : <a href="http://www.engr.uvic.ca/~mech410/ACAD_and_C/c_reference.pdf">Doc-1</a> and 
+<a href="http://users.ece.utexas.edu/~adnan/c-refcard.pdf">Doc-2</a> </li>
+<li>Help for <a href="http://plasma-gate.weizmann.ac.il/Grace/doc/Tutorial.html">xmgrace</a> and 
+<a href="http://people.duke.edu/~hpgavin/gnuplot.html">gnuplot</a>. </li>
+</ul> 
+
+
+
+<hr>
+<font color="red"> Credits : </font>
+<br>
+<hr>
+Udaysinh Bhosale (IISER Pune) and Sanku Paul (IISER Pune) for the fortran and C programs listed in this page.
+<br> <br> <br>
+
+</body>
+</html>

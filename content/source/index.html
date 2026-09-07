@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Website of M. S. Santhanam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&subset=latin">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+
+ul li {
+  color: black; 
+  /* set color of list item text */
+
+  list-style: none; 
+}
+
+
+li::before {content: "•"; color: blue;
+  display: inline-block; width: 1em;
+  margin-left: -1em
+}
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-left: 10px solid blue;
+	border-bottom: 6px solid transparent;
+}
+
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESEARCH</a>
+    <a href="courses.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEACHING</a>
+
+<div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PUBLICATIONS<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="pubs.html#secgeneral" class="w3-bar-item w3-button">General articles</a>
+        <a href="pubs.html#secjournals" class="w3-bar-item w3-button">Journal articles</a>
+      </div>
+    </div>
+
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="group.html" class="w3-bar-item w3-button">Research Group</a>
+        <a href="forpdf.html" class="w3-bar-item w3-button">Postdoc Positions</a>
+<!--        <a href="#" class="w3-bar-item w3-button">Media</a>   -->
+      </div>
+    </div>
+<a href="http://www.iiserpune.ac.in/~santh" class="w3-padding-large w3-light-blue w3-hide-small w3-right">M. S. SANTHANAM</a>
+
+<!-- <i class="fa fa-search"></i></a> -->
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESEARCH</a>
+  <a href="courses.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEACHING</a>
+  <a href="pubs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PUBLICATIONS</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="group.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research Group</a>
+  <a href="forpdf.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Postdocs</a>
+</div>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:100%;margin-top:50px">
+
+<!--  <div class="w3-row">  -->
+
+<div class="w3-col w3-container w3-half w3-large w3-padding-large">
+
+<img src="collage2.jpg" style="max-width:100%;height:auto;margin-left:40px" alt="Research"> <br> <br>
+
+<p style="margin-left:40px">
+Welcome to the webpage of Santhanam. <br>
+He is on the faculty of physics at <a href="https://www.iiserpune.ac.in">Indian Institute 
+of Science Education and Research</a>, Pune, India. <br> <br>
+
+Research interests broadly cover the areas of nonlinear dynamics, quantum chaos, 
+quantum computation and machine learning, statistical physics, complex networks, extreme events and 
+complex systems. Specifically, the problems range
+from driven quantum systems and random matrix theory to random walks and extreme events
+on networks and data science. <br><br>
+
+For more information, visit the <a href="http://www.iiserpune.ac.in/~santh/research.html">research</a>
+and <a href="http://www.iiserpune.ac.in/~santh/pubs.html">publications</a> page. <br> <br>
+
+<span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9656;</span> Visit our <a href="https://electioninsights.in"><i>Election Insights</i></a> &nbsp; project website.
+<br> <br>
+
+<span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9656;</span> Visit our <a href="http://www.iiserpune.ac.in/~hazardmap"><i>Infectious Diseases Hazard Map (India)</i></a> &nbsp; project. 
+<br>
+
+<span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9656;</span> <a href="http://www.iiserpune.ac.in/~santh/forpdf.html">Post-doc positions</a> &nbsp;
+<br>
+
+<span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9656;</span> <a href="http://www.iiserpune.ac.in/~santh/qml_tutorial.html">Quantum machine learning tutorial at CODS-2025</a> &nbsp;
+</p>
+
+</div>
+
+<div class="w3-col w3-container w3-half w3-border-top w3-border-bottom">
+<h4 class="w3-wide">RECENT WORK</h4>
+
+<ul>
+
+<li class="w3-padding-16"><a href="https://arxiv.org/abs/2604.11855">Localization with Hopping Disorder in Quasi-periodic Synthetic Momentum Lattice</a><br>
+Joel M. Sunil, J. Bharathi Kannan, Monu Bhartiya, Rayees A S, Shuvarati Roy, G. J. Sreejith, M. S. Santhanam, Umakant Rapol
+<br>
+arxiv.org/2604.11855 (2026).<br>
+</li>
+
+<li class="w3-padding-16"><a href="https://doi.org/10.1103/cg8k-t1rz">Flux-fluctuation relation for quantum walks on networks</a><br>
+Nisarg Vyas and M. S. Santhanam<br>
+Phys. Rev. E <b>113</b>, 014311 (2026)<br>
+</li>
+
+<li class="w3-padding-16"> <a href="https://arxiv.org/abs/2506.11464">Approach to network failure due to intrinsic fluctuations</a> <br>
+Shaunak Roy, Vimal Kishore and M. S. Santhanam<br>
+Phys. Rev. E <b>113</b><i>(Letters)</i>  062302 (2026)  .<br>
+</li>
+
+<li class="w3-padding-16"> <a href="https://arxiv.org/abs/2401.05065">Universal Statistics of Competition in Democratic Elections</a> <br>
+Ritam Pal, Aanjaneya Kumar and M. S. Santhanam<br>
+<a href="https://doi.org/10.1103/PhysRevLett.134.017401">Phys. Rev. Lett. <b>134</b>, 017401 (2025)</a><br>
+<span class="dot"></span> <a href="https://www.nature.com/articles/d41586-025-00023-4"><i>Nature Research Highlight</i></a> &nbsp; and <a href="https://electioninsights.in/media.html">news media</a> highlighted this paper.
+</li>
+
+<li class="w3-padding-16"> <a href="https://doi.org/10.1063/5.0313289">Upper bounds on charging power and tangible advantage in quantum batteries</a> <br>
+Sreeram PG, J. Bharathi Kannan and M. S. Santhanam<br>
+<i>Applied Physics Letters</i> &nbsp; <b>128</b>, 134002 (2026). <br>
+</li>
+
+<li class="w3-padding-16"> <a href="https://arxiv.org/abs/2406.13211">Amplitude amplification and estimation using quantum kicked rotor</a> <br>
+V. Keshav and M. S. Santhanam<br>
+Phys. Rev. A <b>111</b>, 032601 (2025)<br>
+</li>
+
+<li class="w3-padding-16"><a href="https://indianexpress.com/article/opinion/columns/semiconductors-gps-c-v-raman-satyendra-nath-bose-einstein-10440280/">In 100 years, quantum physics has touched every aspect of our lives</a><br>
+J. Bharathi Kannan and M. S. Santhanam<br>
+<i><a href="quantum_31dec25.png">The Indian Express</a></i>, 31.12.2025.
+</li>
+
+</ul>
+
+<br>
+
+</div>
+
+<!-- </div> -->
+
+
+
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-padding-small w3-bottom w3-opacity w3-blue-grey w3-medium">
+        <i class="fa fa-map-marker" style="width:30px"></i> IISER Pune, India  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +91 20 25908088 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: s&#97;nth&#64;iiserpune&#46;ac.in
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=4786063; 
+var sc_invisible=1; 
+var sc_partition=54; 
+var sc_click_stat=1; 
+var sc_security="3e2c9ba2"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="myspace profile counters"
+href="http://www.statcounter.com/myspace/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/4786063/0/3e2c9ba2/1/"
+alt="myspace profile counters" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+<!-- Default Statcounter code for MSS's IISER Home page
+http://sites.iiserpune.ac.in/~santh -->
+<script type="text/javascript">
+var sc_project=4786063; 
+var sc_invisible=1; 
+var sc_security="3e2c9ba2"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/4786063/0/3e2c9ba2/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+
+
+
+
+</body>
+</html>

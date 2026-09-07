@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>PH4273 / PH6423 : Nonlinear Dynamics</title>
+</head>
+
+<style>
+div {
+  padding: 10px;
+  border: 5px solid gray;
+  background-color: lightgrey;
+  margin: 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+table, th, td {
+  border:;
+}
+
+</style>
+
+<body>
+
+<big style="color: blue;">PH4273 / PH6423 : &nbsp;Nonlinear Dynamics</big><br>
+(August 2026 semester)<br>
+<br>
+
+
+This is a first course on nonlinear dynamics meant for students from all disciplines with a background in calculus and linear algebra.<br><br>
+<span style="font-style: italic; color: blue;">Course contents : </span> &#8729; <a href="ph4273_6423.pdf">Download as PDF file</a>
+<ul>
+<li>Linear and nonlinear systems in 1D
+<li>Bifurcations in 1D
+<li>Flows on a circle
+<li>Linear and nonlinear systems in 2D
+<li>Bifurcations in 2D
+<li>Symbolic sequences
+<li>Characterisation of chaos
+<li>chaos in 1D maps and flows
+<li>Measures of chaos and routes to chaos
+<li>Hamiltonian chaos
+<li>Generalised dimensions, fractals and strange attractors
+</ul>
+<br>
+
+<span style="font-style: italic; color: blue;">Books :</span><br>
+<small>(Reference numbers mentioned later refer to these books.)</small>
+<br> <br>
+
+<span style="font-style: italic; color: rgb(102, 51, 0);">1. Nonlinear dynamics and chaos</span> by Steven Strogatz<br>
+<small>(Classic introductory text for students from any science background.)</small> 
+<br> <br>
+
+<span style="font-style: italic; color: rgb(102, 51, 0);">2. Chaos : Introduction to dynamical systems</span> by K. T. Alligood, T. D. Sauer and J. A. Yorke<br>
+<small>(This textbook has mathemtical flavour to it.)</small> 
+<br> <br>
+
+<span style="font-style: italic;"><span style="color: rgb(102, 51, 0);">3. Chaos in dynamical systems</span>&nbsp;</span> by Edward Ott<br>
+<small>(The chaos textbook for physicists. A bit too condensed and fast-paced.)</small> 
+<br> <br>
+
+<span style="font-style: italic;"><span style="color: rgb(102, 51, 0);">4. Differential equations, dynamical systems and an introduction to chaos</span>&nbsp;</span> by M. W. Hirsch, Stephen Smale and Robert Devaney<br>
+<small>(Good for the chaos part)</small>
+<br> <br>
+
+<span style="font-style: italic; color: rgb(102, 51, 0);">5. Chaos and nonlinear dynamics : An introduction for scientists and engineers</span> by Robert Hilborn<br>
+<small>(A good nonlinear dynamics textbook for physicists. Good for those seeking physical intuition and explanations.)</small> 
+<br> <br>
+
+<!--
+<span style="font-style: italic; color: rgb(102, 51, 0);">5. Introduction to nonlinear physics</span> by Liu Lam<br>
+<small>(Nonlinear dynamics textbook at introductory level.)</small>
+-->
+
+<span style="font-style: italic; color: blue;">Evaulation :</span><br>
+
+<table style="width:20%">
+<tr>
+<td> Quiz (1 or 2) </td>
+<td> : 30% </td>
+</tr>
+
+<tr>
+<td> Midsem </td>
+<td> : 30% </td>
+</tr>
+
+<tr>
+<td> Endsem </td>
+<td> : 40% </td>
+</tr>
+
+</table>
+
+<br> <br> <br>
+
+<!--
+
+<hr style="width: 100%; height: 2px;">
+<div>
+<p style="color:blue;">Announcements : </p>
+
+18.4.2024 : <br>
+&#x25CF; <a href="nld_test2_2024.pdf">Test 2 question paper</a>
+<br> <br>
+
+12.4.2024 : <br>
+&#x25CF; <b>End-sem exam</b> on 29.4.2024. This exam will cover everything taught in class, though almost 60% of the questions will be from the part taught after midsem exam (Lectures 14 to 25).
+
+<br> <br>
+
+5.4.2024 : <br>
+&#x25CF; <a href="nld_2024_test1.pdf">Test 1 question paper</a><br>
+<a href="phy342_2024_midsem.pdf">Midsem question paper</a>
+<br> <br>
+
+27.3.2024 : <br>
+&#x25CF; Second test will be held on <b> 6th April, 2024 (Saturday) at 11:00AM</b>. This test will cover everything taught in class after midsem exam and until 21.3.2024 (Lectures 14 to 21).
+
+<br> <br>
+
+
+20.1.2024 : <br>
+&#x25CF; First test will be held on 6.2.2024 from 9.00 AM to 9.45 AM during the usual class hours. This test will cover all portions taught until 25.1.2024. 
+</div>
+<hr style="width: 100%; height: 2px;"><br>
+
+-->
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5"
+cellspacing="0">
+<tbody>
+
+<!--
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 18.4.2024 &#9553; Lecture 26 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Beyond the course and wading into research questions : Introductory ideas (not meant for exams) about integrable systems, KdV equations and solitons, nonlinear Schrodinger equation, classical and quantum chaos in Hamiltonian systems, and complex networks.  <br>
+Ref : <a href="https://www.science.org/doi/10.1126/science.276.5318.1520">Solitons</a>, <a href="https://www.scientificamerican.com/article/quantum-chaos-subatomic-worlds">Quantum chaos</a>, <a href="https://doi.org/10.1016/j.physrep.2005.10.009">Complex networks</a>
+</td>
+</tr>
+
+<tr> <td>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 4.4.2024 &#9553; Lecture 25 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Strange attractor, self-similarity dimension, Box-counting dimension, Cantor set, Koch curve. <br>
+Ref : Section 11.0 to 11.4 of Ref [1]
+</td>
+</tr>
+
+<tr> <td>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 2.4.2024 &#9553; Lecture 24 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Lorentz model, dissipative system, chaos in Lorentz model, strange attractor. <br>
+Ref : Section 9.2 and initial parts of section 9.3 of Ref [1]
+</td>
+</tr>
+
+<tr> <td>
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 28.3.2024 &#9553; Lecture 23 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Feigenbaum scaling in single-humped maps. Feigenbaum constant. <br>
+Brief notes for <a href="feigenbaum_scaling.pdf">Feigenbaum scaling</a><br>
+Ref : Section 10.7 of Ref [1]
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 26.3.2024 &#9553; Lecture 22 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Hierarchy of randomness : ergodicity, mixing and chaotic. <br>
+Intro to Feigenbaum scaling in single-humped maps. Super-stable periodic points.<br>
+Ref : Section 10.7 of Ref [1] for scaling in maps.
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 21.3.2024 &#9553; Lecture 21 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Shift map, what is a shift and its relation to chaos, Counting periodic orbits of shift map <br>
+Ref : Sec 15.6 of Ref [4] given in the list of books above.<br>
+Brief notes for <a href="shift_map.pdf">Shift map</a><br>
+Brief notes for <a href="count_orbits.pdf">Counting periodic orbits</a><br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 19.3.2024 &#9553; Lecture 20 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Defining chaos, doubling map, proof that doubling map and tent map are chaotic <br>
+Ref : Sec 15.4 of Ref [4] given in the list of books above.<br>
+Brief notes for <a href="def_chaos.pdf">chaos definition</a><br>
+Some additional reading : <a href="https://www.jstor.org/stable/2691012">Various definitions of chaos</a>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 14.3.2024 &#9553; Lecture 19 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Iteneraries, sensitivity to initial conditions, Lyapunov exponent, application to tent and logistic maps <br>
+Ref : Sec 1.8 of Ref [2] given in the list of books above.
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 12.3.2024 &#9553; Lecture 18 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Conjugacy relation, conjugacy between tent and logistic maps, invariant density of logistic map using conjugacy<br>
+Ref : Sec 15.4 of Ref [4] given in the list of books above.
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 7.3.2024 &#9553; Lecture 17 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Tent map, invariant density and Perron-Frobenius equation, invariant density of tent map.<br>
+Ref : Sec 2.3.3 of Ref [3] given in the list of books above.
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 5.3.2024 &#9553; Lecture 16 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Logistic map, period-k fixed points, bifurcation diagram for logistic map, cobweb diagram.<br>
+<a href="https://www.complexity-explorables.org/flongs/logistic">Try logistic map simulation online</a>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 29.2.2024 &#9553; Lecture 15 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Introduction to one-dimensional maps, linear stability, fixed points.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 27.2.2024 &#9553; Lecture 14 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Bifurcations in 2D, Hopf bifurcations<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 15.2.2024 &#9553; Lecture 13 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Limit cycle oscillations, Poincare-Bendixon theorem and how to apply it.<br><br>
+<iframe width="227" height="127" src="https://www.youtube.com/embed/PpyKSRo8Iec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="227" height="127" src="https://www.youtube.com/embed/o72GGxQqWt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+Belousov-Zhabotinsky oscillating chemical reaction.
+<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 13.2.2024 &#9553; Lecture 12 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Nonlinear systems in two dimensions (continued). Structural stability of saddles, problems with linear stability analysis, conservative systems, robustness of centres in conservative systems.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 8.2.2024 &#9553; Lecture 11 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Nonlinear systems in two dimensions. Methods of analysis, examples, stability picture in the trace - determinant plane.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 1.2.2024 &#9553; Lecture 10 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Linear systems in two dimensions. Some interesting special cases including the case of degenerate eigenvalues, stability picture in the trace - determinant plane.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 30.1.2024 &#9553; Lecture 9 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Linear systems in two dimensions. Types of stability and fixed points. <br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+-->
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 31.8.2026 &#9553; Lecture 8 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Flows on a circle. Saddle-node bifurcation and passage through bottleneck region, square-root scaling law in the vicinity of saddle-node bifurcation.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 25.8.2026 &#9553; Lecture 7 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Bead in a rotating hoop. Example of pitchfork bifurcation, non-dimensionalising the equation of motion.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 24.8.2026 &#9553; Lecture 6 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Bifurcations (Continued)<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 18.8.2026 &#9553; Lecture 5 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Bifurcations. Transcritical and pitchfork bifurcation. Stabilising unstable systems. Hysterisis. What all this means in practice ?<br>
+&#9654; Additional readings if you are interested (not mandatory for the course) : <br>
+<a href="https://www.science.org/doi/full/10.1126/science.1225244">Anticipating critical transitions</a> <br>
+<a href="https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2020gl088503">Pitchfork bifurcation and critical temperature transition</a> <br>
+
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 17.8.2026 &#9553;  &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Class cancelled.
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 11.8.2026 &#9553; Lecture 4 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Flows in one dimension. Figuring out solution without actually solving them. Existence and uniqueness of solutions for ODEs. <br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 10.8.2026 &#9553; Lecture 3 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Nonlinear oscillators, separatrix, time-period, calculating time-period of oscillatory motion.<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 4.8.2026 &#9553; Lecture 2 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Nonlinear systems. Exact solution of linear and nonlinear pendulum in terms of elliptic functions. Time-period of oscillation.<br>
+&#9654; Nonlinear pendulum : <a href="https://iopscience.iop.org/article/10.1088/0143-0807/32/2/019">Comprehensive solution</a>, and one more <a href="https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Scientific_Computing_(Chasnov)/II%3A_Dynamical_Systems_and_Chaos/10%3A_The_Simple_Pendulum">resource for analytical solution</a>.
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 3.8.2026 &#9553; Lecture 1 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Introduction to nonlinearity. Effects of nonlinearity (e.g, Millenium bridge collapse), synchronisation, basics. <br> <br>
+
+<iframe width="227" height="127" src="https://www.youtube.com/embed/eAXVa__XWZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+
+Additional reading (not mandatory for the course) : <a href="https://www.nature.com/articles/438043a">A research articleon this bridge collapse</a>
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eAXVa__XWZ8" title="YouTube video player" frameborder="3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
+<br>
+</td>
+</tr>
+
+</table>
+
+
+<br>
+<br>
+<a href="http://sites.iiserpune.ac.in/~santh">Back to home page</a>
+<br>
+<br>
+
+<hr style="width: 100%; height: 2px;"><br><br>
+
+</body> </html>
+

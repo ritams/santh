@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Website of M. S. Santhanam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&subset=latin">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+
+ul li {
+  color: black; 
+  /* set color of list item text */
+
+  list-style: none; 
+}
+
+
+li::before {content: "•"; color: blue;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+}
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESEARCH</a>
+    <a href="courses.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEACHING</a>
+<div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PUBLICATIONS<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="pubs.html#secgeneral" class="w3-bar-item w3-button">General articles</a>
+        <a href="pubs.html#secjournals" class="w3-bar-item w3-button">Journal articles</a>
+      </div>
+    </div>
+
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="group.html" class="w3-bar-item w3-button">Research Group</a>
+        <a href="forpdf.html" class="w3-bar-item w3-button">Postdocs</a>
+<!--        <a href="#" class="w3-bar-item w3-button">Media</a>   -->
+      </div>
+    </div>
+<a href="http://www.iiserpune.ac.in/~santh" class="w3-padding-large w3-light-blue w3-hide-small w3-right">M. S. SANTHANAM</a>
+
+<!-- <i class="fa fa-search"></i></a> -->
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESEARCH</a>
+  <a href="courses.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEACHING</a>
+  <a href="pubs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PUBLICATIONS</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="group.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research Group</a>
+  <a href="forpdf.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Postdocs</a>
+</div>
+
+
+<!--  Page content begins here -->
+
+<div class="w3-display-container w3-padding-large" style="height:300px;">
+<div class="w3-display-bottomleft w3-padding-large">
+M. S. Santhanam <br>
+Physics Department <br>
+<a href="https://www.iiserpune.ac.in">Indian Institute of Science Education and Research</a> <br>
+Dr. Homi Bhabha Road <br>
+Pune 411 008. <br>
+India. <br> <br>
+
+Phone : +91 20 25908088 <br>
+Email : <img style="width: 229px; height: 16px;" src="emailadd1.jpg"><br>
+Web : www.iiserpune.ac.in/~santh
+</div>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
+

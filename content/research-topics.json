@@ -1,0 +1,193 @@
+{
+  "quantum-chaos": {
+    "label": "Quantum chaos & nonlinear dynamics",
+    "papers": [
+      "dichotomy-in-the-effect-of-chaos-on-ergotropy",
+      "amplitude-amplification-and-estimation-using-quantum-kicked-rotor",
+      "periodicity-of-dynamical-signatures-of-chaos-in-quantum-kicked-top",
+      "chaos-and-localized-phases-in-a-two-body-linear-kicked-rotor",
+      "interaction-induced-directed-transport-in-quantum-chaotic-systems",
+      "quantum-kicked-rotor-and-its-variants-chaos-localization-and-beyond",
+      "interplay-between-quantum-diffusion-and-localization-in-the-atom-optics-kicked-rotor",
+      "dynamical-transitions-in-aperiodically-kicked-tight-binding-models",
+      "quantum-resonances-of-kicked-rotor-in-the-position-representation",
+      "non-monotonic-diffusion-rates-in-an-atom-optics-levy-kicked-rotor",
+      "periodicity-of-quantum-correlations-in-the-quantum-kicked-top",
+      "exact-distribution-of-spacing-ratios-for-random-and-localized-states-in-quantum-chaotic-systems",
+      "floquet-states-of-kicked-particle-in-a-singular-potential-exponential-and-power-law-profiles",
+      "non-exponential-decoherence-and-subdiffusion-in-an-atom-optics-kicked-rotor",
+      "signatures-of-bifurcation-on-quantum-correlations-case-of-quantum-kicked-top",
+      "barrier-induced-chaos-in-the-kicked-rotor-classical-sub-diffusion-and-quantum-localization",
+      "synchronization-of-coupled-map-lattice-using-delayed-variable-feedback",
+      "classically-induced-suppression-of-energy-growth-in-a-chaotic-quantum-system",
+      "dynamics-of-kicked-particles-in-a-double-barrier-structure",
+      "genetic-programming-based-approach-for-synchronisation-with-parameter-mismatches-in-eeg",
+      "effect-of-classical-bifurcations-on-the-quantum-entanglement-of-two-coupled-quartic-oscillators",
+      "zero-delay-synchronization-of-chaos-in-coupled-map-lattices",
+      "spectral-fluctuations-and-1-f-noise-in-the-order-chaos-transition-regime",
+      "entanglement-measures-in-quantum-and-classical-chaos",
+      "chaos-in-coupled-quartic-oscillators",
+      "computation-of-highly-excited-states-of-chaotic-quantum-system",
+      "chaos-and-exponentially-localised-eigenstates-in-smooth-hamiltonian-system",
+      "chaos-and-localisation-in-coupled-quartic-oscillators",
+      "local-scaling-in-homogeneous-hamiltonian-systems",
+      "identification-of-localised-states-in-a-chaotic-system",
+      "nmr-investigations-of-dynamical-tunneling-in-spin-systems"
+    ],
+    "selected": [
+      "barrier-induced-chaos-in-the-kicked-rotor-classical-sub-diffusion-and-quantum-localization",
+      "periodicity-of-dynamical-signatures-of-chaos-in-quantum-kicked-top",
+      "signatures-of-bifurcation-on-quantum-correlations-case-of-quantum-kicked-top"
+    ]
+  },
+  "localisation": {
+    "label": "Localisation",
+    "papers": [
+      "localization-with-hopping-disorder-in-quasi-periodic-synthetic-momentum-lattice",
+      "probing-the-localization-effects-in-krylov-basis",
+      "asymmetric-dynamical-localization-and-precision-measurement-of-bec-micromotion",
+      "chaos-and-localized-phases-in-a-two-body-linear-kicked-rotor",
+      "quantum-kicked-rotor-and-its-variants-chaos-localization-and-beyond",
+      "interplay-between-quantum-diffusion-and-localization-in-the-atom-optics-kicked-rotor",
+      "dynamical-transitions-in-aperiodically-kicked-tight-binding-models",
+      "exact-distribution-of-spacing-ratios-for-random-and-localized-states-in-quantum-chaotic-systems",
+      "floquet-states-of-kicked-particle-in-a-singular-potential-exponential-and-power-law-profiles",
+      "non-exponential-decoherence-and-subdiffusion-in-an-atom-optics-kicked-rotor",
+      "barrier-induced-chaos-in-the-kicked-rotor-classical-sub-diffusion-and-quantum-localization",
+      "chaos-and-exponentially-localised-eigenstates-in-smooth-hamiltonian-system",
+      "chaos-and-localisation-in-coupled-quartic-oscillators",
+      "identification-of-localised-states-in-a-chaotic-system"
+    ],
+    "selected": [
+      "quantum-kicked-rotor-and-its-variants-chaos-localization-and-beyond",
+      "non-exponential-decoherence-and-subdiffusion-in-an-atom-optics-kicked-rotor",
+      "chaos-and-localized-phases-in-a-two-body-linear-kicked-rotor"
+    ]
+  },
+  "random-matrices": {
+    "label": "Random matrix theory",
+    "papers": [
+      "higher-order-gap-ratios-of-singular-values-in-open-quantum-systems",
+      "symmetry-deduction-from-spectral-fluctuations-in-complex-quantum-systems",
+      "scaling-in-the-eigenvalue-fluctuations-of-the-empirical-correlation-matrices",
+      "higher-order-spacing-ratios-in-random-matrix-theory-and-complex-quantum-systems",
+      "exact-distribution-of-spacing-ratios-for-random-and-localized-states-in-quantum-chaotic-systems",
+      "random-matrix-approach-to-categorical-data-analysis",
+      "power-spectrum-of-the-fluctuation-of-the-spectral-staircase-function",
+      "quantum-spectrum-as-a-time-series-fluctuations-and-self-similarity",
+      "financial-and-other-multivariate-time-series-spectral-and-related-properties",
+      "spectral-fluctuations-and-1-f-noise-in-the-order-chaos-transition-regime",
+      "random-matrix-approach-to-multivariate-correlations-some-limiting-cases"
+    ],
+    "selected": [
+      "higher-order-spacing-ratios-in-random-matrix-theory-and-complex-quantum-systems",
+      "exact-distribution-of-spacing-ratios-for-random-and-localized-states-in-quantum-chaotic-systems",
+      "higher-order-gap-ratios-of-singular-values-in-open-quantum-systems"
+    ]
+  },
+  "quantum-ml": {
+    "label": "Quantum information & computing",
+    "papers": [
+      "extreme-events-of-quantum-walks-on-networks",
+      "upper-bounds-on-charging-power-and-tangible-advantage-in-quantum-batteries",
+      "flux-fluctuation-relation-for-quantum-walks-on-networks",
+      "scaling-in-the-dynamics-of-directed-lackadaisical-quantum-walks",
+      "dichotomy-in-the-effect-of-chaos-on-ergotropy",
+      "amplitude-amplification-and-estimation-using-quantum-kicked-rotor",
+      "faster-entanglement-production-driven-by-quantum-resonances-in-many-body-rotors",
+      "periodicity-of-quantum-correlations-in-the-quantum-kicked-top",
+      "signatures-of-bifurcation-on-quantum-correlations-case-of-quantum-kicked-top",
+      "effect-of-classical-bifurcations-on-the-quantum-entanglement-of-two-coupled-quartic-oscillators",
+      "entropic-uncertainty-relations-for-the-ground-state-of-a-coupled-system",
+      "entanglement-measures-in-quantum-and-classical-chaos"
+    ],
+    "selected": [
+      "amplitude-amplification-and-estimation-using-quantum-kicked-rotor",
+      "faster-entanglement-production-driven-by-quantum-resonances-in-many-body-rotors",
+      "periodicity-of-quantum-correlations-in-the-quantum-kicked-top"
+    ]
+  },
+  "networks": {
+    "label": "Complex networks",
+    "papers": [
+      "extreme-events-of-quantum-walks-on-networks",
+      "approach-to-network-failure-due-to-intrinsic-fluctuations",
+      "flux-fluctuation-relation-for-quantum-walks-on-networks",
+      "congestion-and-extreme-events-in-urban-street-networks",
+      "depolarisation-of-opinions-on-social-networks-through-random-nudges",
+      "biased-random-walkers-and-extreme-events-on-the-edges-of-complex-networks",
+      "an-infectious-diseases-hazard-map-for-india-based-on-mobility-and-transportation-networks",
+      "extreme-events-in-nagel-schreckenberg-model-of-traffic-flow-on-complex-networks",
+      "extreme-events-in-stochastic-transport-on-networks",
+      "distinct-nodes-visited-by-random-walkers-on-scale-free-networks",
+      "synchronization-of-coupled-map-lattice-using-delayed-variable-feedback",
+      "manipulation-of-extreme-events-on-scale-free-networks",
+      "extreme-events-and-event-size-fluctuations-in-biased-random-walks-on-networks",
+      "extreme-events-on-complex-networks",
+      "genetic-programming-based-approach-for-synchronisation-with-parameter-mismatches-in-eeg",
+      "zero-delay-synchronization-of-chaos-in-coupled-map-lattices"
+    ],
+    "selected": [
+      "distinct-nodes-visited-by-random-walkers-on-scale-free-networks",
+      "biased-random-walkers-and-extreme-events-on-the-edges-of-complex-networks",
+      "an-infectious-diseases-hazard-map-for-india-based-on-mobility-and-transportation-networks"
+    ]
+  },
+  "extreme-events": {
+    "label": "Extreme events",
+    "papers": [
+      "extreme-events-of-quantum-walks-on-networks",
+      "approach-to-network-failure-due-to-intrinsic-fluctuations",
+      "congestion-and-extreme-events-in-urban-street-networks",
+      "continuous-gated-first-passage-processes",
+      "inference-in-gated-first-passage-processes",
+      "biased-random-walkers-and-extreme-events-on-the-edges-of-complex-networks",
+      "first-detection-of-threshold-crossing-events-under-intermittent-sensing",
+      "inferring-long-memory-using-extreme-events",
+      "extreme-events-in-nagel-schreckenberg-model-of-traffic-flow-on-complex-networks",
+      "extreme-events-in-stochastic-transport-on-networks",
+      "preface-to-the-special-issue-on-extreme-events-and-its-applications",
+      "manipulation-of-extreme-events-on-scale-free-networks",
+      "extreme-event-recurrence-time-distributions-and-long-memory",
+      "extreme-events-and-event-size-fluctuations-in-biased-random-walks-on-networks",
+      "extreme-events-on-complex-networks",
+      "return-interval-distribution-of-extreme-events-and-long-term-memory",
+      "long-range-correlations-and-rare-events-in-boundary-layer-wind-fields"
+    ],
+    "selected": [
+      "extreme-events-on-complex-networks",
+      "manipulation-of-extreme-events-on-scale-free-networks",
+      "extreme-events-in-stochastic-transport-on-networks"
+    ]
+  },
+  "complex-systems": {
+    "label": "Complex systems & data science",
+    "papers": [
+      "universal-statistics-of-competition-in-democratic-elections",
+      "voter-turnouts-govern-key-electoral-statistics",
+      "individual-and-team-performance-in-cricket",
+      "depolarisation-of-opinions-on-social-networks-through-random-nudges",
+      "an-infectious-diseases-hazard-map-for-india-based-on-mobility-and-transportation-networks",
+      "scaling-in-the-eigenvalue-fluctuations-of-the-empirical-correlation-matrices",
+      "record-statistics-of-equities-and-market-indices",
+      "random-matrix-approach-to-categorical-data-analysis",
+      "record-statistics-of-financial-time-series-and-geometric-random-walks",
+      "multichannel-digital-watermarking-of-color-images-using-svd",
+      "genetic-programming-based-approach-for-synchronisation-with-parameter-mismatches-in-eeg",
+      "financial-time-series-analysis-a-brief-overview",
+      "digital-watermarking-in-the-singular-vector-domain",
+      "financial-and-other-multivariate-time-series-spectral-and-related-properties",
+      "long-range-correlations-and-rare-events-in-boundary-layer-wind-fields",
+      "weather-data-mining-using-independent-component-analysis",
+      "comment-on-effects-of-cosmic-rays-on-atmospheric-chloroflurocarbon-dissociation-and-ozone-depletion",
+      "a-new-significance-test-for-empirical-orthogonal-functions",
+      "statistics-of-atmospheric-correlations",
+      "simulation-of-tropical-cyclones-using-regional-weather-prediction-models"
+    ],
+    "selected": [
+      "universal-statistics-of-competition-in-democratic-elections",
+      "record-statistics-of-financial-time-series-and-geometric-random-walks",
+      "an-infectious-diseases-hazard-map-for-india-based-on-mobility-and-transportation-networks"
+    ]
+  }
+}

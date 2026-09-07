@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Website of M. S. Santhanam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&subset=latin">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+
+ul li {
+  color: black; 
+  /* set color of list item text */
+
+  list-style: none; 
+}
+
+
+li::before {content: "•"; color: blue;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+}
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESEARCH</a>
+    <a href="courses.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEACHING</a>
+
+<div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PUBLICATIONS<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="pubs.html#secgeneral" class="w3-bar-item w3-button">General articles</a>
+        <a href="pubs.html#secjournals" class="w3-bar-item w3-button">Journal articles</a>
+      </div>
+    </div>
+
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="group.html" class="w3-bar-item w3-button">Research Group</a>
+        <a href="forpdf.html" class="w3-bar-item w3-button">Postdoc Positions</a>
+<!--        <a href="#" class="w3-bar-item w3-button">Media</a>   -->
+      </div>
+    </div>
+<a href="http://www.iiserpune.ac.in/~santh" class="w3-padding-large w3-light-blue w3-hide-small w3-right">M. S. SANTHANAM</a>
+
+<!-- <i class="fa fa-search"></i></a> -->
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESEARCH</a>
+  <a href="courses.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEACHING</a>
+  <a href="pubs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PUBLICATIONS</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="group.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research Group</a>
+  <a href="forpdf.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Postdocs</a>
+</div>
+
+
+<!--  Page content begins here -->
+
+<br> <br> <br>
+<p style="margin-left:40px">
+We are always looking for motivated post-doctoral fellows. <br>
+Prospective post-doctoral candidates interested in working with me can write to me. One possible source of funding is the NPDF scheme of ANRF. The call for applications is currently open, with 15.6.2025 being the last date.<br>
+My broad areas of research are <a href="http://www.iiserpune.ac.in/~santh/research.html">listed here</a>.
+</p>
+<br>
+
+
+
+<div style="margin-left:40px;width:50%;border-radius: 10px; background: beige; padding: 10px;">
+CLOSED NOW <br>
+<font color="blue">January 2022 </font>: One to two post-doctoral positions are available in the area of quantum computing, quantum machine learning and/or
+quantum chaos. <br> Previous research experience in these or closely related areas is preferred. Write to me if you are interested in the post-doc position.
+</div>
+
+
+<br>
+
+<p style="margin-left:40px">
+As of May 2021, IISER funded <a href="http://www.iiserpune.ac.in/links/job-opportunities">post-doctoral positions are available (Advt. no : 30/2021).</a> <br>
+Last date for application is 15.6.2021.
+<br> <br>
+
+Another possible source of funding for post-doc position is the <a href="https://serb.gov.in/page/english/awards_fellowship#National%20Post%20Doctoral%20Fellowship%20(N-PDF)">National Post-Doctoral Fellowship</a>. <br>
+However, other funding sources can be considered as well.
+<br> <br>
+
+</p>
+
+
+
+
+
+<!--  Page content ends here -->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
+

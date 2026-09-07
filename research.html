@@ -1,251 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research | M. S. Santhanam</title><meta name="description" content="Quantum physics, nonlinear dynamics, and complex systems."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=2956409872"><script defer src="vendor/fuse.min.js"></script><script defer src="search-index.js?v=9cab98b193"></script><script defer src="search-engine.js?v=bb45d9c267"></script><script defer src="script.js?v=16a4ca8e28"></script></head>
+<body><noscript><style>.header{position:static}.header .container{flex-wrap:wrap}.nav{position:static;visibility:visible;opacity:1;pointer-events:auto;height:auto;padding:1rem 0;flex-wrap:wrap}.menu-toggle{display:none}.page-content{padding-top:3rem}</style><p class="archive-note">Search needs JavaScript. You can browse all pages using the navigation links.</p></noscript><a class="skip-link" href="#main">Skip to content</a><header class="header"><div class="container"><a href="index.html" class="logo">Santhanam<span class="logo-dot">.</span></a><nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="pubs.html">Publications</a><a href="courses.html">Teaching</a><a href="group.html">Group</a><a href="forpdf.html">Opportunities</a><a href="contact.html">Contact</a></nav><div class="header-actions"><a class="search-trigger" href="search.html" aria-label="Search the whole site"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><span>Search</span><kbd>⌘ K</kbd></a><button class="menu-toggle" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><main id="main" tabindex="-1"><div class="container page-content"><header class="page-intro"><span class="section-tag">Research / M. S. Santhanam</span><h1>Research</h1><p>Quantum physics, nonlinear dynamics, and complex systems.</p></header><nav class="jump-links" aria-label="On this page"><a href="#quantum-chaos">Quantum classical correspondence</a><a href="#localisation">Chaos, quantum localisation and interactions</a><a href="#random-matrices">Random matrix spectra</a><a href="#quantum-ml">Quantum computing and machine learning</a><a href="#networks">Complex Networks</a><a href="#extreme-events">Extreme events</a><a href="#complex-systems">Complex systems / Data Science</a></nav><article class="entry" id="quantum-chaos"><div class="entry-marker">01</div><div><h3>Quantum classical correspondence</h3><div class="prose"><div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | M. S. Santhanam</title>
-    <meta name="description" content="Detailed research areas of Prof. M. S. Santhanam at IISER Pune">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .research-page-content {
-            padding: 8rem 0;
-        }
 
-        .research-section {
-            margin-bottom: 6rem;
-            max-width: 800px;
-        }
+Classically chaotic systems display sensitive dependence on
+initial conditions. Many physical systems such as the driven
+and damped pendulum, atoms in strong magnetic fields, nonlinearly
+coupled oscillators and periodically driven rotors exhibit this property.
+Chaos, of course, pervades anything from weather to perhaps even stock market
+dynamics. See my <a href="https://www.youtube.com/watch?v=cDPw0rUoCUw">
+somewhat non-technical talk on Hamiltonian chaos</a> for more details.<br/>
 
-        .research-section h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            color: var(--text);
-            position: relative;
-        }
+The quantum dynamics of such systems do not display dependence
+on initial conditions. One recurring theme of my research is to
+explore and understand the manifestations of classical chaos in
+the quantum dynamics. In particular, interest is foucussed on
+how the rich variety in classical dynamical structures affect the
+quantum spectra. Recently, we had studied
+<a href="http://arxiv.org/abs/1603.05777">quantum-classical correspondence</a>
+in a non-KAM system.
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#barrier-induced-chaos-in-the-kicked-rotor-classical-sub-diffusion-and-quantum-localization">Barrier induced chaos in the kicked rotor : Classical sub-diffusion and quantum localization</a> <span class="paper-year">(2016)</span></li><li><a href="pubs.html#periodicity-of-dynamical-signatures-of-chaos-in-quantum-kicked-top">Periodicity of dynamical signatures of chaos in quantum kicked top</a> <span class="paper-year">(2025)</span></li><li><a href="pubs.html#signatures-of-bifurcation-on-quantum-correlations-case-of-quantum-kicked-top">Signatures of bifurcation on quantum correlations: Case of quantum kicked top</a> <span class="paper-year">(2017)</span></li></ul><a class="resource-link" href="pubs.html?topic=quantum-chaos">All publications in this area</a></aside></div></div></article><article class="entry" id="localisation"><div class="entry-marker">02</div><div><h3>Chaos, quantum localisation and interactions</h3><div class="prose"><div>
 
-        .research-section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: var(--accent);
-        }
 
-        .research-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
+The interplay between chaotic dynamics,
+localisation and interactions is of special interest especially in the
+context of driven quantum systems.
+Kicked rotor, a pendulum periodically kicked by an external potential,
+is a prominent and well studied chaotic system
+We study different variants of kicked rotor that
+throw light on the connections between the quantum dynamical localization,
+a variant of the Anderson localization, and classical (sub-)diffusion. We recently wrote a detailed review
+article on <a href="https://doi.org/10.1016/j.physrep.2022.01.002"><i>Quantum kicked rotor
+and its variants: Chaos, localization and beyond </i></a> in <i>Physics Reports (2022)</i>.
 
-        .research-section em {
-            color: var(--accent);
-            font-style: italic;
-        }
 
-        .back-home {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 3rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
+<br/>
 
-        .back-home:hover {
-            color: var(--accent);
-        }
+In a recent work that combines theory, numerics and cold atoms experiment (in collaboration
+with my colleague <a href="http://www.iiserpune.ac.in/~umakant.rapol">Umakant Rapol</a>),
+we have shown how specific manipulation of kick sequence imparted to a rotor can lead to
+<a href="https://doi.org/10.1103/PhysRevLett.118.174101"> control of
+quantum decoherence</a>, which shows up as a decay of localization. <br/>
 
-        .back-home svg {
-            width: 18px;
-            height: 18px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            transform: rotate(180deg);
-        }
-    </style>
-</head>
+In general, the role of interactions and how they affect localization properties in
+chaotic and many-body systems is explored. The physical systems of interest range from
+coupled kicked rotors and kicked tops to quantum spin-chains.
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#quantum-kicked-rotor-and-its-variants-chaos-localization-and-beyond">Quantum kicked rotor and its variants : Chaos, localization and beyond</a> <span class="paper-year">(2022)</span></li><li><a href="pubs.html#non-exponential-decoherence-and-subdiffusion-in-an-atom-optics-kicked-rotor">Non-exponential decoherence and subdiffusion in an atom-optics kicked rotor</a> <span class="paper-year">(2017)</span></li><li><a href="pubs.html#chaos-and-localized-phases-in-a-two-body-linear-kicked-rotor">Chaos and localized phases in a two-body linear kicked rotor</a> <span class="paper-year">(2024)</span></li></ul><a class="resource-link" href="pubs.html?topic=localisation">All publications in this area</a></aside></div></div></article><article class="entry" id="random-matrices"><div class="entry-marker">03</div><div><h3>Random matrix spectra</h3><div class="prose"><div>
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">Santhanam</a>
-            <button class="menu-toggle" aria-label="Toggle Navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="index.html#research">Research</a>
-                <a href="index.html#work">Work</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+Random matrix theory (RMT) is widely used in physics (in condensed matter
+physics, nuclear physics etc.)
+to understand the spectral signatures of complex quantum systems and
+as a qualitative indicator of underlying classical dynamics. RMT is extensively
+applied in the study of chaotic quantum systems. Recently,
+we had obtained a <a href="https://doi.org/10.1103/PhysRevB.98.104305">series of results</a>
+for the higher order spacing ratio distributions in random matrix theory and
+complex quantum systems.<br/>
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#higher-order-spacing-ratios-in-random-matrix-theory-and-complex-quantum-systems">Higher order spacing ratios in random matrix theory and complex quantum systems</a> <span class="paper-year">(2018)</span></li><li><a href="pubs.html#exact-distribution-of-spacing-ratios-for-random-and-localized-states-in-quantum-chaotic-systems">Exact distribution of spacing ratios for random and localized states in quantum chaotic systems</a> <span class="paper-year">(2018)</span></li><li><a href="pubs.html#higher-order-gap-ratios-of-singular-values-in-open-quantum-systems">Higher-order gap ratios of singular values in open quantum systems</a> <span class="paper-year">(2024)</span></li></ul><a class="resource-link" href="pubs.html?topic=random-matrices">All publications in this area</a></aside></div></div></article><article class="entry" id="quantum-ml"><div class="entry-marker">04</div><div><h3>Quantum computing and machine learning</h3><div class="prose"><div>
 
-    <main class="research-page-content">
-        <div class="container">
-            <a href="index.html" class="back-home">
-                <svg viewBox="0 0 24 24">
-                    <path d="M5 12h14m-7-7l7 7-7 7" />
-                </svg>
-                <span>Back to Home</span>
-            </a>
+Quantum computer is expected to speed-up certain class of problems,
+the prime factorisation being one such example. One of the central resource for
+a quantum computer is the quantum entanglement. Our research is
+focussed on studying entanglement (and more generally quantum correlations) properties, and curiously, to
+understand how it is affected by classical dynamics in the case
+of chaotic and many-body systems. Our recent representative paper on this topic is
+<a href="https://doi.org/10.1103/PhysRevE.95.012216">Phys. Rev. E <b>95</b>, 012216 (2017). </a><br/>
+Another exciting area of interest we are starting on is the quantum machine learning (QML). Many machine
+learning tasks can possibly benefit from their quantised versions. With the advent of real
+quantum computers, we might actually be able to implement QML algorithms in some years.
+This has both fundamental and practical benefits, as discussed in
+<a href="https://www.nature.com/articles/nature23474">Nature <b>549</b>, 195 (2017).</a>
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#amplitude-amplification-and-estimation-using-quantum-kicked-rotor">Amplitude amplification and estimation using quantum kicked rotor</a> <span class="paper-year">(2025)</span></li><li><a href="pubs.html#faster-entanglement-production-driven-by-quantum-resonances-in-many-body-rotors">Faster entanglement production driven by quantum resonances in many-body rotors</a> <span class="paper-year">(2024)</span></li><li><a href="pubs.html#periodicity-of-quantum-correlations-in-the-quantum-kicked-top">Periodicity of quantum correlations in the quantum kicked top</a> <span class="paper-year">(2018)</span></li></ul><a class="resource-link" href="pubs.html?topic=quantum-ml">All publications in this area</a></aside></div></div></article><article class="entry" id="networks"><div class="entry-marker">05</div><div><h3>Complex Networks</h3><div class="prose"><div>
 
-            <div class="section-intro">
-                <span class="section-tag">Deep Dive</span>
-                <h1>Research Investigation</h1>
-            </div>
+has emerged as a unified framework to study
+many complex systems, ranging from stock markets to biological
+processes. We are mainly interested in the dynamical processes on
+networks, their properties and the interplay between network
+structure and dynamics on networks. The dynamical processes that we study
+can range from random walks to coupled chaotic systems.
+These are relevant for many transport processes on networks and
+also for such applications as web search engines and online recommender
+systems.
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#distinct-nodes-visited-by-random-walkers-on-scale-free-networks">Distinct nodes visited by random walkers on scale-free networks</a> <span class="paper-year">(2019)</span></li><li><a href="pubs.html#biased-random-walkers-and-extreme-events-on-the-edges-of-complex-networks">Biased random walkers and extreme events on the edges of complex networks</a> <span class="paper-year">(2022)</span></li><li><a href="pubs.html#an-infectious-diseases-hazard-map-for-india-based-on-mobility-and-transportation-networks">An infectious diseases hazard map for India based on mobility and transportation networks</a> <span class="paper-year">(2021)</span></li></ul><a class="resource-link" href="pubs.html?topic=networks">All publications in this area</a></aside></div></div></article><article class="entry" id="extreme-events"><div class="entry-marker">06</div><div><h3>Extreme events</h3><div class="prose"><div>
 
-            <!-- Quantum Classical Correspondence -->
-            <section class="research-section" id="quantum-chaos">
-                <h2>Quantum Classical Correspondence</h2>
-                <p>Classically chaotic systems display sensitive dependence on initial conditions. Many physical systems
-                    such as the driven and damped pendulum, atoms in strong magnetic fields, nonlinearly coupled
-                    oscillators and periodically driven rotors exhibit this property. Chaos, of course, pervades
-                    anything from weather to perhaps even stock market dynamics.</p>
-                <p>The quantum dynamics of such systems do not display dependence on initial conditions. One recurring
-                    theme of my research is to explore and understand the manifestations of classical chaos in the
-                    quantum dynamics. In particular, interest is focussed on how the rich variety in classical dynamical
-                    structures affect the quantum spectra. Recently, we had studied <em>quantum-classical
-                        correspondence</em> in a non-KAM system.</p>
-            </section>
+Extreme events are an interesting emergent phenomena in complex systems.
+Floods, droughts, traffic jams, mobile congestion are some of the commonly
+encountered extreme events. Unlike floods and droughts, the latter two
+are examples of extreme events taking place on networks.
+The aim is to not only understand the properties of extreme events on networks
+but also explore the possibility of controllinng them. Our earlier
+research in the context of random walks on networks has showed
+a rather counter-intuitive property that extreme
+events are more likely to take place on small degree nodes of a network
+than on hubs. Our first paper on this topic is
+<a href="https://doi.org/10.1103/PhysRevLett.106.186701">Phys. Rev. Lett. <b>106</b>, 186701 (2011).</a>
+I co-edited a special issue on
+<a href="https://www.sciencedirect.com/journal/chaos-solitons-and-fractals/vol/74">
+<i>Extreme events and its applications</i></a> and its <a href="https://www.sciencedirect.com/science/article/pii/S0960077915000739">introduction</a> provides a brief overview of the subject.
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#extreme-events-on-complex-networks">Extreme events on complex networks</a> <span class="paper-year">(2011)</span></li><li><a href="pubs.html#manipulation-of-extreme-events-on-scale-free-networks">Manipulation of extreme events on scale-free networks</a> <span class="paper-year">(2013)</span></li><li><a href="pubs.html#extreme-events-in-stochastic-transport-on-networks">Extreme events in stochastic transport on networks</a> <span class="paper-year">(2020)</span></li></ul><a class="resource-link" href="pubs.html?topic=extreme-events">All publications in this area</a></aside></div></div></article><article class="entry" id="complex-systems"><div class="entry-marker">07</div><div><h3>Complex systems / Data Science</h3><div class="prose"><div>
 
-            <!-- Localisation -->
-            <section class="research-section" id="localisation">
-                <h2>Chaos, Quantum Localisation and Interactions</h2>
-                <p>The interplay between chaotic dynamics, localisation and interactions is of special interest
-                    especially in the context of driven quantum systems. Kicked rotor, a pendulum periodically kicked by
-                    an external potential, is a prominent and well studied chaotic system. We study different variants
-                    of kicked rotor that throw light on the connections between the quantum dynamical localization, a
-                    variant of the Anderson localization, and classical (sub-)diffusion. We recently wrote a detailed
-                    review article on <em>Quantum kicked rotor and its variants: Chaos, localization and beyond</em> in
-                    Physics Reports (2022).</p>
-                <p>In a recent work that combines theory, numerics and cold atoms experiment, we have shown how specific
-                    manipulation of kick sequence imparted to a rotor can lead to <em>control of quantum
-                        decoherence</em>, which shows up as a decay of localization.</p>
-                <p>In general, the role of interactions and how they affect localization properties in chaotic and
-                    many-body systems is explored. The physical systems of interest range from coupled kicked rotors and
-                    kicked tops to quantum spin-chains.</p>
-            </section>
-
-            <!-- Random Matrices -->
-            <section class="research-section" id="random-matrices">
-                <h2>Random Matrix Spectra</h2>
-                <p>Random matrix theory (RMT) is widely used in physics (in condensed matter physics, nuclear physics
-                    etc.) to understand the spectral signatures of complex quantum systems and as a qualitative
-                    indicator of underlying classical dynamics. RMT is extensively applied in the study of chaotic
-                    quantum systems. Recently, we had obtained a <em>series of results</em> for the higher order spacing
-                    ratio distributions in random matrix theory and complex quantum systems.</p>
-            </section>
-
-            <!-- Quantum ML -->
-            <section class="research-section" id="quantum-ml">
-                <h2>Quantum Computing and Machine Learning</h2>
-                <p>Quantum computer is expected to speed-up certain class of problems, the prime factorisation being one
-                    such example. One of the central resource for a quantum computer is the quantum entanglement. Our
-                    research is focussed on studying entanglement (and more generally quantum correlational properties,
-                    and curiously, to understand how it is affected by classical dynamics in the case of chaotic and
-                    many-body systems.</p>
-                <p>Another exciting area of interest we are starting on is the quantum machine learning (QML). Many
-                    machine learning tasks can possibly benefit from their quantised versions. With the advent of real
-                    quantum computers, we might actually be able to implement QML algorithms in some years. This has
-                    both fundamental and practical benefits.</p>
-            </section>
-
-            <!-- Complex Networks -->
-            <section class="research-section" id="networks">
-                <h2>Complex Networks</h2>
-                <p>Has emerged as a unified framework to study many complex systems, ranging from stock markets to
-                    biological processes. We are mainly interested in the dynamical processes on networks, their
-                    properties and the interplay between network structure and dynamics on networks. The dynamical
-                    processes that we study can range from random walks to coupled chaotic systems. These are relevant
-                    for many transport processes on networks and also for such applications as web search engines and
-                    online recommender systems.</p>
-            </section>
-
-            <!-- Extreme Events -->
-            <section class="research-section" id="extreme-events">
-                <h2>Extreme Events</h2>
-                <p>Extreme events are an interesting emergent phenomena in complex systems. Floods, droughts, traffic
-                    jams, mobile congestion are some of the commonly encountered extreme events. Unlike floods and
-                    droughts, the latter two are examples of extreme events taking place on networks. The aim is to not
-                    only understand the properties of extreme events on networks but also explore the possibility of
-                    controlling them.</p>
-                <p>Our research in the context of random walks on networks has showed a rather counter-intuitive
-                    property that extreme events are more likely to take place on small degree nodes of a network than
-                    on hubs.</p>
-            </section>
-
-            <!-- Complex Systems -->
-            <section class="research-section" id="complex-systems">
-                <h2>Complex Systems / Data Science</h2>
-                <p>Since the last few decades, principles of physics are beginning to be applied to areas outside of it.
-                    Econophysics is one such area that represents an application of principles of physics, especially
-                    statistical physics, to some problems of financial markets. Here, our efforts are directed towards
-                    understanding larger organising principles of complex systems. One of our recent works was to study
-                    <em>record statistics of financial data</em> in the context of geometric random walks.
-                </p>
-                <p>Since the pandemic began in 2020, we used extensive mobility data in India to create an
-                    <em>infectious diseases hazard map</em>.
-                </p>
-            </section>
-
-        </div>
-    </main>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-inner fade-in">
-                <div class="contact-text">
-                    <span class="section-tag">Contact</span>
-                    <h2>Get in Touch</h2>
-                    <p>Interested in collaboration or have questions about research?</p>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-row">
-                        <span class="contact-label">Email</span>
-                        <a href="mailto:santh@iiserpune.ac.in">santh@iiserpune.ac.in</a>
-                    </div>
-                    <div class="contact-row">
-                        <span class="contact-label">Socials</span>
-                        <div class="contact-socials">
-                            <a href="https://www.researchgate.net/profile/M-S-Santhanam"
-                                target="_blank">ResearchGate</a>
-                            <span class="sep">/</span>
-                            <a href="https://www.linkedin.com/in/m-s-santhanam-9a0a1b1b/" target="_blank">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <span class="footer-credit">—web // imagined by <strong><a href="https://ritampal.com"
-                        target="_blank">ritam</a></strong></span>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+ Since the last few decades, principles of physics are
+beginnning to be applied to areas outside of it. Econophysics is one such
+area that represents an application of principles of physics, especially statistical
+physics, to some problems of financial markets. A good review is available
+<a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.81.1703">
+here</a>. Here, our efforts are directed towards understanding larger organising principles
+of complex systems. One of our recent works was to study
+<a href="https://arxiv.org/abs/1407.3742">record statistics of financial data</a>
+in the context of geometric random walks.
+Since the pandemic began in 2020, we used extensive
+mobility data in India to create an <a href="https://www.iiserpune.ac.in/~hazardmap">infectious diseases hazard map</a>.
+<br/><br/>
+</div><aside class="related-papers" aria-label="Selected publications"><h4>Selected publications</h4><ul><li><a href="pubs.html#universal-statistics-of-competition-in-democratic-elections">Universal Statistics of Competition in Democratic Elections</a> <span class="paper-year">(2025)</span></li><li><a href="pubs.html#record-statistics-of-financial-time-series-and-geometric-random-walks">Record statistics of financial time series and geometric random walks</a> <span class="paper-year">(2014)</span></li><li><a href="pubs.html#an-infectious-diseases-hazard-map-for-india-based-on-mobility-and-transportation-networks">An infectious diseases hazard map for India based on mobility and transportation networks</a> <span class="paper-year">(2021)</span></li></ul><a class="resource-link" href="pubs.html?topic=complex-systems">All publications in this area</a></aside></div></div></article></div></main><footer class="footer"><div class="container"><div><span>M. S. Santhanam · IISER Pune</span><div class="footer-links"><a href="https://sites.iiserpune.ac.in/~santh/research.html">IISER source</a><a href="search.html">Search the site</a><a href="forpdf.html">Postdoctoral opportunities</a></div></div><span class="footer-credit">—web // imagined by <strong><a href="https://ritampal.com">ritam</a></strong></span></div></footer><button class="scroll-top" type="button" aria-label="Scroll to top" hidden>Top</button>
+<dialog class="search-dialog" aria-labelledby="search-title"><div class="search-dialog-top"><h2 id="search-title">Search the site</h2><button class="search-close" aria-label="Close search">Esc <span aria-hidden="true">×</span></button></div><label class="sr-only" for="dialog-query">Search the whole site</label><input id="dialog-query" type="search" placeholder="Title, author, topic, or course" autocomplete="off"><div class="search-filters" aria-label="Filter search results"></div><p class="search-status" role="status" aria-live="polite"></p><div class="search-results"></div><div class="search-help">↑ ↓ navigate <span>Enter to open · Esc to close</span></div></dialog></body></html>

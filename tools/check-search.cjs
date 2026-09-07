@@ -1,0 +1,17 @@
+const fs=require('node:fs');
+const vm=require('node:vm');
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const context={window:{}};vm.createContext(context);
+vm.runInContext(fs.readFileSync(path.join(root,'search-index.js'),'utf8'),context);
+const search=require('../search-engine.js')(context.window.SEARCH_INDEX);
+assert(search('quantm choas').some(x=>x.url==='research.html#quantum-chaos'));
+assert(search('Ritam elections').some(x=>x.title.includes('Universal Statistics')));
+assert(search('Santhosh').some(x=>x.url==='group.html#archana-santhosh'));
+assert(search('Saranya').some(x=>x.url.includes('saranya-ray')));
+assert(search('nonlienar dynmics').some(x=>x.url.includes('phy342')));
+assert(search('quantum 2026').some(x=>x.category==='Journal articles'));
+assert.equal(search('zzzxxyyqqww').length,0);
+assert.equal(search('<script>zzzxxyyqqww</script>').length,0);
+console.log('PASS: typo/transposition tolerance, multi-field queries, people, years, course content, and no-results cases.');

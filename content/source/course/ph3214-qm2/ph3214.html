@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.box {
+            width: 80%;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+     }
+
+
+
+</style>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>phy321 : quantum mechanics</title>
+</head>
+
+<body>
+<h2>PH 3214 : &nbsp; Quantum Mechanics II </h2>
+<b>(January-April, 2026)</b>
+
+<br>
+
+<ul>
+<li>This is the second part of the first course on non-relativistic quantum mechanics.</li>
+</ul>
+
+<span style="font-style: italic; color: blue;">Course
+contents</span><span style="color: blue;"> :</span><br>
+<ul>
+<li> Harmonic oscillator and Hydrogenic atoms<br>
+<li> Symmetries in quantum physics<br>
+<li> Addition of angular momenta<br>
+<li> Identical particle, spin and statistics <br>
+<li> Perturbation theory<br>
+<li> Variational principle<br>
+<li> WKB approximation <br>
+<li> Scattering theory <br>
+<li> Dirac equation<br>
+<li> Quantum algorithms<br>
+</ul>
+
+<br>
+
+<span style="font-style: italic; color: blue;">Text Books :</span><br>
+<b>NOTE 1 :</b> The first two books in this list can be downloaded legally within IISER Pune. <br>
+<b>NOTE 2 :</b> Ref 1, 2, 3 in the updates (given below) refer to these text books. <br>
+<ol>
+<li> <i><a href="https://link.springer.com/book/10.1007/978-1-4757-0576-8">Principles of quantum mechanics</a></i> <br>by R. Shankar </li>
+<li> <i><a href="https://link.springer.com/book/10.1007/978-3-642-56826-8">Quantum mechanics : An Introduction</a></i> <br>by Walter Greiner </li>
+<li> <i><a href="https://doi.org/10.1017/9781316995433">Introduction to quantum mechanics</a></i> <br> by David Griffiths </li><br>
+</ol>
+
+<span style="font-style: italic; color: blue;">Evaulation :</span><br>
+<ul>
+<li> Class tests : 40 %<br>
+<li> Midsem &nbsp; &nbsp; : 30 %<br>
+<li>Final &nbsp; &nbsp; &nbsp; &nbsp; : 30 %<br>
+</ul>
+
+<span style="font-style: italic; color: blue;">Office hours :</span><br>
+<ul>
+<li> To be announced <br>  <br><br>
+</ul>
+<br>
+
+
+<span style="font-style: italic; color: blue;"><b>Announcements :</b></span><br>
+<ul> 
+<li> 2.5.2026 : <b><a href="document.pdf"><b>Solution to endsem exam</b></a></b>. 
+</ul>
+
+<ul> 
+<li> 20.4.2026 : <b><a href="ph3214_test2_2026_sol.pdf"><b>Solution to test -2</b></a></b>. 
+</ul>
+
+<ul>
+<li> 16.4.2026 : The portion for the endsem exam is everything taught in the entire course. But 60 to 70% of the questions will be from what was taught in lectures 16-32.
+</ul>
+
+
+<ul> 
+<li> 30.3.2026 : <b><a href="ph3214_jan2026_test1_sol.pdf"><b>Solution to test -1</b></a></b>.  &nbsp; &nbsp; &nbsp; &nbsp;
+<b><a href="ph3214_midsem_2026_sol.pdf"><b>Solution to midsem exam</b></a></b>.
+</ul>
+
+
+
+<ul>
+<li> 23.3.2026 : <b>Second test </b>will be held on <s>2.4.2026 (Thursday)</s>
+<b>6.4.2026 (Monday)</b> during class hours from 9 to 10 AM. Everything taught in lectures 17 to 22 is part of this test. Variational technique is not part of the test.
+</ul>
+
+
+<ul>
+<li> 16.2.2026 : <b>For mid-sem exam </b>, all that was taught from lectures 1 to 15 will be
+covered.
+</ul>
+
+<ul>
+<li> 26.1.2026 : <b><a href="ass2_aug2024.pdf"><b>Problem Sheet-1</b></a></b>. Try these sample problems and also other similar problems from any other text books. This problem sheet has more problems than what is needed for the test. You can only try out what is relevant for the test on 2.2.2026. <br>
+</ul>
+
+<ul>
+<li> 21.1.2026 : <b>First test </b>will be held on <b>2.2.2026 (Monday)</b> during class hours from 9 to 10 AM. Everything taught in lectures 1 to 8 is part of this test.
+</ul>
+
+<br>
+<br>
+
+
+<hr style="width: 100%; height: 3px;">
+<b> COURSE UPDATES : </b>
+<hr style="width: 100%; height: 3px;">
+
+<b>NOTE 1 :</b> Course updates will appear here. <br>
+<b>NOTE 2 :</b> Ref 1, 2, 3 refer to the text book list given above. <br>
+<b>NOTE 3 :</b> &#128996; Brown circle indicates that the content is for extra reading and not necessary for this course.<br>
+
+<br> <br>
+
+<table style="width:80%" border="1" cellpadding="5" cellspacing="0">
+
+<!--
+<tr>
+<td style="background-color: rgb(245, 212, 181 );">
+What's coming in the next few classes<br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; special topics : EPR and entanglement <br>
+&#11208; special topics : Quantum algorithms (if time permits) <br>
+&#11208; These special topics are for exposure and not part of exams. <br>
+<br>
+</td>
+</tr>
+-->
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+16.4.2026 &#9553; Lecture 32 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Periodic perturbations (contd) (Sec 18.2 in Ref 1) <br>
+&#11208; <a href="pert_theory_problems.pdf">Sample problems in perturbation theory</a> <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+13.4.2026 &#9553; Lecture 31 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Adiabatic perturbations (contd) <br>
+&#11208; Periodic perturbations (Sec 18.2 in Ref 1) <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+9.4.2026 &#9553; Lecture 30 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Time-dependent perturbation theory (contd) (Sec 18.2 in Ref 1)<br>
+&#11208; Sudden and adiabatic perturbations <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+7.4.2026 &#9553; Lecture 29 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Time-dependent perturbation theory (Sec 18.2 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+2.4.2026 &#9553; Lecture 28 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Degenerate perturbation theory (Sec 17.3 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+30.3.2026 &#9553; Lecture 27 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Time-independent perturbation theory (Sec 17.1 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+26.3.2026 &#9553; Lecture 26 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; How to use WKB formula : example problems (Sec 16.2 in Ref 1)<br>
+&#11208; <a href="wkb_harmonic_oscillator.html">Harmonic oscillator example</a> <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+24.3.2026 &#9553; Lecture 25 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Validity of WKB approximation (Sec 16.2 in Ref 1)<br>
+&#11208; Connecton formulas for WKB approximation (Sec 8.3 in Ref 3)<br>
+&#11208; <a href="https://scipp-legacy.pbsci.ucsc.edu/~haber/archives/physics216_10/airy10.pdf">Airy functions</a> <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+23.3.2026 &#9553; Lecture 24 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; WKB approximation (Sec 16.2 in Ref 1)<br>
+&#128996; <a href="https://physicspages.com/pdf/Quantum%20mechanics/Half%20life%20of%20a%20beer%20can.pdf">WKB, tunelling and half life of a beer can</a><br>
+
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+19.2.2026 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Class not held. To be adjusted later.<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+17.3.2026 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; No class.<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+16.3.2026 &#9553; Lecture 23 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Variational technique (continued) (Sec 16.1 in Ref 1)<br>
+&#11208; <a href="variational_method_h2.html">Variational technique applied to Hydrogen atom</a> <br>
+&#11208; WKB approximation: preliminaries (Sec 16.2 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+14.3.2026 &#9553; Lecture 22 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Identical particles and exchange interaction (Sec 5.1.2 in Ref 3)<br>
+&#11208; Variational technique (Sec 16.1 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+12.3.2026 &#9553; Lecture 21 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Identical particles: symmetric and anti-symmetric states (Sec 10.2, 10.3 in Ref 1)<br>
+&#128996; <a href="https://www.scientificamerican.com/article/identical-quantum-particles-pass-practicality-test/">Identical particles pass the practicality test </a> <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+10.3.2026 &#9553; Lecture 20 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; \( N \) degrees of freedom: some prelimnaries (Sec 10.1 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+9.3.2026 &#9553; Lecture 19 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; How to determine Clebsch-Gordon coefficients (Sec 15.2 in Ref 1)<br>
+&#11208; <a href="angmom_addition_problem.pdf">Notes for computing CG coefficient</a><br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+5.3.2026 &#9553; Lecture 18 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Clebsch-Gordon coefficients (Sec 15.2 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+2.3.2026 &#9553; Lecture 17 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Addition of angular momenta \( {\mathbf J = \mathbf J_1 + \mathbf J_2} \) (Sec 15.1 and 15.2 in Ref 1)<br>
+&#11208; Product basis states \( | j_1 m_1, j_2 m_2 \rangle \) and coupled basis states \( | j m, j_2 j_2 \rangle \) <br>
+&#11208; <a href="angmom_addition.pdf">Class notes for angular momentum addition</a>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+17.2.2026 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; No class.<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+16.2.2026 &#9553; Lecture 16 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Recap of spin and related notations (Sec 14.1 and 14.2 in Ref 1) <br>
+&#11208; Introduction to adding two spins<br>
+&#11208; <a href="spin1.html">How to add two spins</a><br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+12.2.2026 &#9553; Lecture 15 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Hydrogen atom: properties of eigenstates, degeneracy (Sec 13.1 in Ref 1) <br>
+&#11208; Classical limit of Hydrogen atom solutions<br>
+&#11208; 3D harmonic oscillator (Sec 12.6 in Ref 1) <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+10.2.2026 &#9553; Lecture 14 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Hydrogen atom problem : eigenvalues and eigenstates (Sec 13.1 in Ref 1)<br>
+&#11208; Associated Laguerre polynomials (Sec 13.1 in Ref 1) <br>
+&#11208; <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Quantum_Chemistry_with_Applications_in_Spectroscopy_(Fleming)/06%3A_The_Hydrogen_Atom/6.02%3A_The_Quantum_Mechanical_H-atom">Hydrogen atom in one webpage</a> <br>
+&#128996; <a href="https://www.newscientist.com/article/mg21829194-900-smile-hydrogen-atom-youre-on-quantum-camera/">Smile, Hydrogen atom, you are on (quantum) camera</a> <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+9.2.2026 &#9553; Lecture 13 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Setting up radial Schrodinger equation for rotationally invariant potential \( V(r) \). <br>
+&#11208; <a href="laplacian_polar_coordinates.pdf">Laplacian operator in spherical polar coordinate system</a>. <br>
+&#11208; Solving for \(U(r)\) and \(R(r)\) for a general \( V(r) \)  (Sec 12.6 in Ref 1) <br>
+&#11208; <a href="angmom_ylm.pdf">Class notes for spherical harmonics / Radial Schrodinger equation</a>
+<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<td style="background-color: rgb( 190, 221, 251 );">
+5.2.2026 &#9553; Lecture 12 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Common eigenfunctions for \(J^2\) and \(J_z\). <br>
+&#11208; Spherical harmonics  (Sec 12.5 in Ref 1)
+(Sec 12.5 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+3.2.2026 &#9553; Lecture 11 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Using Ladder operators to solve the eigenvalue problem of \(L^2\) and \(L_z\). <br>
+&#11208; Explicit matrix forms for  \(J_x, J_y, J_z\) and \(J^2\).
+(Sec 12.5 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+2.2.2026 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Class Test - 1<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+29.1.2026 &#9553; Lecture 10 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Rotationally invariant problems in 3D. <br>
+&#11208; Ladder operators and angular momentum eigenvalue problems
+(Sec 12.4 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+27.1.2026 &#9553; Lecture 9 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Setting up the radial Schrodinger equation in 2-dimensions. <br>
+&#11208; <a href="isotropic_oscillator_2D.pdf">Harmonic oscillator in 2-dimensions in polar coordinates.</a><br>
+&#11208; Angular momentum, Rotations and commutation relations in 3D (Sec 12.4 in Ref 1).
+<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+22.1.2026 &#9553; Lecture 8 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Operator for finite rotations. Eigenvalues of angular momentum operator.<br> 
+&#11208; Combining rotations and translations. (Sec 12.2 in Ref 1) <br> 
+(Sec 12.3 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+20.1.2026 &#9553; Lecture 7 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Rotational invariance (continued) (Sec 12.1 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+19.1.2026 &#9553; Lecture 6 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Rotational invariance (Sec 12.1 in Ref 1)<br>
+&#11208; parity symmetry and examples (Sec 11.3, 11.4 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+15.1.2026 &#9553; Lecture 5 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; time translation symmetry, parity symmetry (Sec 11.3, 11.4 in Ref 1)<br>
+&#11208; finite space translation operator (Sec 11.2)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+13.1.2026 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Class not held.<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+12.1.2026 &#9553; Lecture 4 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Length scale in harmonic oscillator<br>
+&#11208; Relation between classical turning point and length scale<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+8.1.2026 &#9553; Lecture 3 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc6.html">Comparison with classical harmonic oscillator</a> (Sec 7.3 in Ref 1)<br>
+&#11208; Correspondence principle <br>
+&#11208; nodes, symmetry of eigenstates etc. <br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+6.1.2026 &#9553; Lecture 2 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Eigenvalues and eigenfunctions using raising/lowering operators <br>
+(Sec 7.4, 7.5 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td  style="background-color: rgb(215, 233, 250 );">
+5.1.2026 &#9553; Lecture 1 <br>
+</td>
+</tr>
+<tr>
+<td style="background-color: rgb( 190, 221, 251 );">
+&#11208; Solving harmonic oscillator in energy basis : raising/lowering operators (Sec 7.4 in Ref 1)<br>
+<br>
+</td>
+</tr>
+
+</table>
+
+<br>
+<br>
+<a href="http://sites.iiserpune.ac.in/%7Esanth"><small>Back
+to home page</small></a>
+</body></html>
+
+

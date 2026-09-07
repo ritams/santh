@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>IDC101 : Introduction to computation </title>
+  <link rel="stylesheet" href="course.css">
+</head>
+
+<body style="background-color:rgb(250,259,250);">
+
+<br>
+<span style="font-size:120%; color:blue;">PH6582 / DS6152 : Quantum Machine Learning (Aug-Dec 2023) </span><br>
+</big><br>
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5"
+cellspacing="0">
+<tbody>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(219, 213, 129);">
+
+This is an introductory course on quantum machine learning meant for Ph.D students. Others are free to audit and attend the course. Only the Ph.D students can credit this course.
+This website will have all the updates for this course.<br>
+
+</td>
+</tr>
+</table>
+
+<br>
+<br>
+
+&#9654; <a href="DS6152_PH6582_AUG_2023_13_21.pdf">Course contents</a>
+<br>
+<br>
+&#9654; The classes for this course will start on 6th September 2023. First class will be held on 6.9.2023 at 5:00 PM in physics seminar room 31.
+
+<br>
+<br>
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5"
+cellspacing="0">
+<tbody>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; prelimnaries &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 255, 255, 251 );">
+<a href="https://doi.org/10.1088/1367-2630/abac39">Some questions about quantum machine learning</a> <br>
+<a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.021067">Artificial intelligence and machine learning for quantum technologies, Phys, Rev. X (2023)</a> 
+
+<br>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<br>
+
+<hr>
+
+<table style="text-align: center; width: 100%;" border="0" cellpadding="0"
+cellspacing="0">
+<tbody>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(219, 213, 129);">
+Keep visiting this page for updates to this course.
+</td>
+</tr>
+</table>
+
+<hr>
+<br>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5"
+cellspacing="0">
+<tbody>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 6.9.2023 &#9553; Lecture 1 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Introductory ideas about Turing machine, computational complexity. Introduction to different strands of quantum machine learning.<br>
+Ref : Chapter 3 of Ref [2], and Chapter 1 of Ref [1] <br>
+<a href="https://people.engr.tamu.edu/andreas-klappenecker/csce411-s19/csce411-complexity1.pdf">Basic ideas about P and NP complexity classes</a>
+<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 7.9.2023 &#9553; Lecture 2 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+A toy quantum machine learning problem. Introduces feature vector, data encoding, some general property of Hadamard operation, measuring output.<br>
+Ref : Section 1.2 of Ref [1]. <br>
+Ref : <a href="https://iopscience.iop.org/article/10.1209/0295-5075/119/60002/meta">EPL <b>119</b>, 60002 (2017)</a>. &nbsp;  <a href="https://arxiv.org/abs/1703.10793">arXiv version:1703.10793</a>
+<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 13.9.2023 &#9553; Lecture 3 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Classical machine learning basics -- part 1. Data, feature vectors, models, loss functions. Definitions and examples.<br>
+Ref : Sections 2.1 and 2.2 of Ref [1].
+<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 14.9.2023 &#9553; Lecture 4 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Classical machine learning basics -- part 2. Risk minimisation, overfitting, optimisation by gradient descent method, stochastic gradient descent. A simple linear model.<br>
+Ref : Sections 2.3 of Ref [1]. <br>
+<a href="https://youtu.be/VqKq78PVO9g?si=HhbR03Tc3i3yC9iG">Overfitting and regularisation</a>
+<br>
+</td>
+</tr>
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 21.9.2023 &#9553; Lecture 5 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Classical machine learning basics -- part 3. Linear regression, perceptron as linear classifier, feed-forward neural network, recurrent neural network.<br>
+Ref : Sections 2.5.1 and 2.5.2 of Ref [1]. <br>
+<a href="https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/def_pseudo_inv.html">Pseudo-inverse of a matrix</a> <br>
+<a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote03.html">Perceptron</a>
+<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 5.10.2023 &#9553; Lecture 6 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Classical machine learning basics -- part 4. Recurrent neural network, Hopfield networks, Boltzmann machines  <br>
+Ref : Sections 2.5.2.3 and 2.5.2.4 of Ref [1]. <br>
+<a href="https://towardsdatascience.com/hopfield-networks-neural-memory-machines-4c94be821073">Hopfield networks</a> <br>
+<a href="https://www.cs.toronto.edu/~hinton/csc321/readings/boltz321.pdf">Boltzmann machines</a>
+<br>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 10.10.2023 &#9553; Lecture 7 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Schemes for data encoding on quantum computer, quantum speed-up  <br>
+Ref : Sections 3.4 and 3.5 of Ref [1]. <br>
+<a href="https://pennylane.ai/qml/glossary/quantum_embedding/">Basis and amplitude encoding</a>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 18.10.2023 &#9553; Lecture 8 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Algorithm for basis state encoding of data in superposition<br>
+Ref : Sections 4.1.1 and 4.1.2 of Ref [1]. <br>
+<a href="https://arxiv.org/pdf/quant-ph/9807053.pdf">Quantum associative memory</a>
+</td>
+</tr>
+
+<tr> <td>
+</td> </tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 25.10.2023 &#9553; Lecture 9 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Algorithm for amplitude encoding of data in superposition, quantum random access memory (QRAM)<br>
+Ref : Sections 4.2, 4.2.1 and 4.2.2.1 of Ref [1]. <br>
+See <a href="https://dl.acm.org/doi/abs/10.5555/2011670.2011675">Quantum Inform. Comput. <b>5</b>, 467 (2005)</a> or its <a href="https://doi.org/10.48550/arXiv.quant-ph/0407010">arXiv version</a> for creating arbitrary amplitude encoded states. <br>
+<a href="https://doi.org/10.1103/PhysRevLett.100.160501">First proposal for QRAM</a>, &nbsp; &nbsp;
+<a href="https://doi.org/10.3390/s23177462">A simple exposition about QRAM</a> <br>
+<a href="https://www.cs.umd.edu/class/fall2019/cmsc657/projects/group_11.pdf">One another QRAM resource</a> <br>
+</td>
+</tr>
+
+<tr><td>
+</td></tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; 27.10.2023 &#9553; Lecture 10 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Variational quantum algorithm, quantum variational eigensolver (VQE), quantum variational circuits (VQC)<br>
+Ref : Sections 3.6.5 and 5.1 of Ref [1]. <br>
+Video : <a href="https://www.youtube.com/watch?v=7ALa_JZvV3o">General intro to quantum circuits for ML</a> <br>
+See section 2 in <a href="https://doi.org/10.1016/j.physrep.2022.08.003">Phys. Rep. <b>986</b>, 1 (2022)</a> or its <a href="https://doi.org/10.48550/arXiv.2111.05176">arXiv version</a> for a review of VQE. <br>
+One more review on VQE : <a href="https://doi.org/10.1038/s42254-021-00348-9">Nature Physics <b>3</b> 625, (2021).</a> <br>
+<a href="https://pennylane.ai/qml/glossary/variational_circuit/">An example of VQC</a>, and <a href="https://www.qmunity.tech/tutorials/building-a-variational-quantum-classifier">one more example.<br>
+</td>
+</tr>
+
+<tr><td>
+</td></tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553;1.11.2023 &#9553; Lecture 11 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+quantum variational circuits (VQC)<br>
+Ref : Sections 5.1.4, 5.2.1 and 5.2.2 of Ref [1]. <br>
+See also <a href="https://www.nature.com/articles/s41534-019-0157-8">generative VQC</a> (<a href="https://doi.org/10.48550/arXiv.1801.07686">arXiv:1801.07686</a>)<br>
+<a href="https://www.nature.com/articles/s41467-018-07090-4">Barren plateaus in VQC</a>
+</td>
+</tr>
+
+<tr><td>
+</td></tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553;8.11.2023 &#9553; Lecture 12 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Towards quantum support vector machine (SVM), Basics of classical SVM<br>
+Ref : Section 16.5  in <a href="https://numerical.recipes/book.html">Numerical Recipes</a>. You can download the PDF file.<br>
+Ref : Section 2.5.4 of Ref [1] for kernels, and the kernel trick.<br>
+See also : <a href="https://www.robots.ox.ac.uk/~az/lectures/ml/lect2.pdf">SVM with an application</a> and <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote09.html">SVM lecture</a><br>
+Lagrange multipliers : <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/14%3A_Differentiation_of_Functions_of_Several_Variables/14.08%3A_Lagrange_Multipliers">A simple intro</a> <br>
+<a href="https://www.youtube.com/watch?v=HILVRvDaQsE">A short intro to kernel methods (video)</a>
+
+</td>
+</tr>
+
+<tr><td>
+</td></tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553;10.11.2023 &#9553; Lecture 13 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+Dual formalism, Least-squares version of SVM, and qSVM<br>
+Ref : LS-SVM : <a href="https://link.springer.com/article/10.1023/A:1018628609742">Neural Processing Lett. <b>9</b>, 293 (1999)</a>. You can also download the paper from <a href="https://www.researchgate.net/publication/220578095_Least_Squares_Support_Vector_Machine_Classifiers">here</a>.<br>
+See also : <a href="https://homepages.rpi.edu/~embrem/dm/Suykens_tutorialucl.pdf">LS-SVM</a> &nbsp;&nbsp; and &nbsp; &nbsp;
+<a href="https://ai-master.gitbooks.io/svm/content/lagrange-multiplier-and-dual-formulation.html">Lagrange multiplier and dual formalism</a><br>
+Ref : <a href="https://doi.org/10.1103/PhysRevLett.113.130503">qSVM paper : Phys. Rev. Lett. <b>113</b>, 130503 (2014)</a> and <a href="https://peterwittek.com/2013/08/understanding-quantum-svms/">a simpler exposition of basic ideas</a>.
+<br>
+qSVM requires : QRAM (see lecture 9 above), <a href="https://en.wikipedia.org/wiki/Swap_test">swap test</a> and quantum phase estimation algorithm in section 5.2 of Ref [2]
+</td>
+</tr>
+
+<tr><td>
+</td></tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553;15.11.2023 &#9553; Lecture 14 &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+HHL algorithm<br>
+Ref : <a href="https://doi.org/10.1103/PhysRevLett.103.150502">Phys. Rev. Lett. <b>103</b>, 150502 (2008)</a>. <a href="https://doi.org/10.48550/arXiv.0811.3171">arXiv version</a>.<br>
+See also : <a href="https://arxiv.org/abs/2108.09004">Step-by-step walk through HHL</a> <br>
+Ref: For quantum phase estimation algorithm : section 5.2 and 5.2.1 of Ref [2].
+</td>
+</tr>
+
+<tr><td>
+</td></tr>
+
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250 );">
+&#9553; Postscript : Some additional readings &#9553; <br>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb( 190, 221, 251 );">
+<a href="https://www.nature.com/articles/nphys3272">Scott Aaronson on QML</a>. This is somewhat old, but still worth reading and thinking about it. <br>
+<a href="https://doi.org/10.1038/s43588-022-00311-3">Opportunities and challenges in QML (2022)</a>. This is somewhat biased towards quantum neural networks.<br>
+<a href="https://dl.acm.org/doi/fullHtml/10.1145/3517340">Implementations of some QML algorithms</a>. 
+</td>
+</tr>
+
+</table>
+
+<br>
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="5"
+cellspacing="0">
+<tbody>
+<tr>
+<td colspan="2" style="vertical-align: top; background-color: rgb(215, 233, 250);">
+References : <br>
+
+[1] <i><a href="https://link.springer.com/book/10.1007/978-3-030-83098-4">Machine Learning with Quantum Computers</a></i>, Maria Schuld, Francesco Petruccione, (Springer, 2021)
+<br>
+
+[2] <i><a href="https://doi.org/10.1017/CBO9780511976667">Quantum Computation and Quantum Information</a></i>, Michael Nielsen and Isaac Chuang, (Cambridge Univ Press, 2010)
+</td>
+</tr>
+</table>
+
+
+
+
+
+<br>
+<a href="http://www.iiserpune.ac.in/~santh">Back to home page</a>
+</body>
+</html>

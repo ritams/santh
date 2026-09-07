@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Website of M. S. Santhanam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&subset=latin">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.rounded-corners {
+  border-radius: 35px; /* Adjust the pixel value for more or less rounding */
+}
+
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+
+ul li {
+  color: black; 
+  /* set color of list item text */
+
+  list-style: none; 
+}
+
+
+li::before {content: "•"; color: blue;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+
+#example2 {
+  width: 150px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESEARCH</a>
+    <a href="courses.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEACHING</a>
+<!--    <a href="pubs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PUBLICATIONS</a>  -->
+
+<div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PUBLICATIONS<i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#secgeneral" class="w3-bar-item w3-button">General articles</a>
+        <a href="#secjournals" class="w3-bar-item w3-button">Journal articles</a>
+      </div>
+    </div>
+
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="group.html" class="w3-bar-item w3-button">Research Group</a>
+        <a href="forpdf.html" class="w3-bar-item w3-button">Postdoc Positions</a>
+      </div>
+    </div>
+
+<a href="http://www.iiserpune.ac.in/~santh" class="w3-padding-large w3-light-blue w3-hide-small w3-right">M. S. SANTHANAM</a>
+
+<!-- <i class="fa fa-search"></i></a> -->
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESEARCH</a>
+  <a href="courses.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEACHING</a>
+  <a href="pubs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PUBLICATIONS</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="group.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research Group</a>
+  <a href="forpdf.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Postdocs</a>
+</div>
+
+
+<!--  Page content begins here -->
+<br><br>
+<div id="secgeneral"> </div>
+<br><br>
+
+<div style="margin-left: 30px;">
+
+<h2><font color="#a52a2a">Data and Quantum Machine Learning</font></h2>
+<p>(<a href="https://ikdd.acm.org/cods-2025/tutorials.php">A tutorial</a> presented by M. S. Santhanam and Nisarg Vyas at <a href="https://ikdd.acm.org/cods-2025/">CODS-2025</a> during 17-20 Dec, 2025)
+</p>
+ <img src="rand_qcir.png" alt="quantum circuit" width="500" height="150" class="rounded-corners">  
+<ul> 
+<li> <a href="data_qml_talk1.pdf">Introductory talk on quantum computing and quantum machine learning.</a>
+<br>
+<li> <a href="data_qml_talk2.pdf">Overview of qPCA and qSVM</a>
+
+</ul>
+
+<h3>google-colab notebooks for some QML algorithms</h3>
+
+<b>NOTE:</b> For each topic given below, a list of reading materials are also given at the end of google-colab notebooks.<br>
+You might need google account to run the programs.
+
+<ul> 
+<li> <a href="https://colab.research.google.com/drive/19x7OwCZKCKB8rmIwiC7MycUIDDoNq3gH?usp=sharing">Encoding classical data into quantum states</a>
+<br>
+
+<li> <a href="https://colab.research.google.com/drive/18qONYYUw5WlirlpUuSZwT4SosR5jqQYk?usp=sharing">Quantum variational circuits</a>
+<br>
+
+<li> <a href="https://colab.research.google.com/drive/1g4i4jqpLiTvuub6CjWRnR0VShQGaMEsl?usp=sharing">Quantum principal component analysis</a>
+<br>
+
+<li> <a href="https://colab.research.google.com/drive/1_BVTwq0oe4vRCIaV4IZkohjpuIHuuss2?usp=sharing">Quantum principal component analysis  (user modifiable: try your own correlation matrix)</a>
+<br>
+
+<li> <a href="https://colab.research.google.com/drive/10l4pWmirRg0ZX05sbRb7HO8uVif9Zxxo?usp=sharing">Quantum support vector machine</a>
+<br><br>
+
+</ul>
+
+<h3>(somewhat advanced) mini-course on QML</h3>
+
+<ul>
+<li> <a href="http://www.iiserpune.ac.in/~santh/course/QML/qml.html">An advanced mini-course on quantum machine learning</a> <br>
+(taught at IISER Pune during Aug-Dec, 2023.)
+
+</ul>
+
+
+<br><br>
+
+(More resources will be added soon. Visit this space again.)
+<br><br>
+<br><br>
+
+</div>
+
+<!--  Page content ends here -->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+<!-- Default Statcounter code for MSS's IISER Home page
+http://sites.iiserpune.ac.in/~santh -->
+<script type="text/javascript">
+var sc_project=4786063; 
+var sc_invisible=1; 
+var sc_security="3e2c9ba2"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/4786063/0/3e2c9ba2/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+
+
+
+</body>
+</html>
+
