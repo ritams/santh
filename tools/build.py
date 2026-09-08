@@ -114,8 +114,8 @@ for topic in TOPICS.values():
     assert all(id in papers_by_id for id in topic['papers']), topic['label']
     assert set(topic['selected']) <= set(topic['papers'])
 years=sorted({y for items in pubgroups.values() for _,_,y in items if y},reverse=True)
-publication_body = '<div class="publication-filters" hidden><div class="publication-filter-row"><label>Article type<select id="publication-type"><option value="all">All articles</option><option value="journal">Research publications</option><option value="general">General articles</option></select></label><label>Year<select id="publication-year"><option value="all">All years</option>'+''.join(f'<option>{y}</option>' for y in years)+'</select></label><label class="publication-query-label">Search articles<input id="publication-query" type="search" placeholder="Title, author, or keyword" autocomplete="off"></label><button type="button" id="publication-reset">Clear filters</button></div><div class="topic-filters" role="group" aria-label="Research topic"><button type="button" data-topic="all" aria-pressed="true">All topics</button>'+''.join(f'<button type="button" data-topic="{id}" aria-pressed="false">{esc(topic["label"])}</button>' for id,topic in TOPICS.items())+'</div><p id="publication-status" class="sr-only" role="status" aria-live="polite"></p><p id="publication-empty" hidden>No articles match these filters. Try another topic, year, or search term.</p></div>'
-publication_body+=jumps([('secjournals','Journal articles'),('secgeneral','General articles')])
+publication_body = '<div class="publication-filters" hidden><div class="publication-filter-row"><label>Year<select id="publication-year"><option value="all">All years</option>'+''.join(f'<option>{y}</option>' for y in years)+'</select></label><label class="publication-query-label">Search articles<input id="publication-query" type="search" placeholder="Title, author, or keyword" autocomplete="off"></label><button type="button" id="publication-reset">Clear filters</button></div><div class="topic-filters" role="group" aria-label="Research topic"><button type="button" data-topic="all" aria-pressed="true">All topics</button>'+''.join(f'<button type="button" data-topic="{id}" aria-pressed="false">{esc(topic["label"])}</button>' for id,topic in TOPICS.items())+'</div><p id="publication-status" class="sr-only" role="status" aria-live="polite"></p><p id="publication-empty" hidden>No articles match these filters. Try another topic, year, or search term.</p></div>'
+publication_body='<nav class="publication-tabs" aria-label="Publication type"><a id="tab-journal" href="#secjournals" data-kind="journal">Journal articles</a><a id="tab-general" href="#secgeneral" data-kind="general">General articles</a></nav>'+publication_body
 for cat,id,kind in [('Journal articles','secjournals','journal'),('General articles','secgeneral','general')]:
     articles=[]
     for t,b,y in pubgroups[cat]:
@@ -152,7 +152,57 @@ for el in gs.find_all(['div','ul']):
         else:
             li=el.find('li'); title=txt(li).rstrip(':');li.extract()
             groups[category].append((title,clean(el,'group.html').replace('<ul>','').replace('</ul>','')))
-page('group.html','Research group','Ph.D. students, postdoctoral fellows, thesis students, and research interns. Dates and affiliations follow the IISER group directory.',jumps([(slug(g),g) for g in groups])+''.join(section(g,''.join(entry(t,b,'group.html','People') for t,b in members)) for g,members in groups.items()))
+PORTRAITS = json.loads((ROOT/'content/people-portraits.json').read_text())
+PERSON_LINKS = json.loads((ROOT/'content/people-links.json').read_text())
+def person(title, body, category=''):
+    name = title.split(' (')[0]
+    portrait = PORTRAITS.get(name)
+    if portrait:
+        visual = f'<a class="person-portrait" href="{esc(portrait["source"])}" aria-label="Academic profile of {esc(name)}"><img src="{esc(portrait["path"])}" alt="{esc(name)}" width="125" height="150" loading="lazy" decoding="async"></a>'
+    else:
+        initials = ''.join(word[0] for word in name.split() if word)[:3]
+        visual = f'<div class="person-placeholder" aria-hidden="true">{esc(initials)}</div>'
+    # Preserve existing deep links even though dates no longer appear in headings.
+    identifier = slug(title)
+    date = ''
+    details = re.search(r'\(([^)]+)\)$', title)
+    if category == 'Ph.D Students':
+        joined = re.search(r'Joined in (\d{4})(?:<br\s*/?>)?', body)
+        if joined:
+            date = 'Joined ' + joined[1]
+            body = body[:joined.start()] + body[joined.end():]
+        elif details:
+            date = 'Graduated ' + details[1]
+    elif category == 'Post-doctoral Fellows' and details:
+        date = details[1].replace('-', '–')
+    elif category == "Master's thesis students" and details:
+        year = re.search(r'\d{4}', details[1])
+        date = 'Thesis year ' + year[0] if year else details[1]
+        institution = re.sub(r',?\s*\d{4}', '', details[1]).strip()
+        if institution: date += ' · ' + institution
+    elif details:
+        date = details[1]
+    date_html = f'<p class="person-date">{esc(date)}</p>' if date else ''
+    links = PERSON_LINKS.get(name, [])
+    link_html = '<div class="person-links" aria-label="Academic links for '+esc(name)+'">' + ''.join(f'<a href="{esc(item["url"])}">{esc(item["label"])}</a>' for item in links) + '</div>' if links else ''
+    article = entry(name, date_html + body + link_html, 'group.html', 'People', identifier=identifier)
+    return article.replace('class="entry"', 'class="entry person-entry"').replace('<div class="entry-marker">People</div>', visual)
+pi_body = '<p>Principal investigator · Professor of Physics<br>Indian Institute of Science Education and Research Pune</p><p><a href="research.html">Research</a> · <a href="contact.html">Contact</a></p>'
+pi_section = section('Principal investigator', person('M. S. Santhanam', pi_body))
+group_sections=[]
+group_jumps=[('principal-investigator','Principal investigator')]
+for g,members in groups.items():
+    if g == 'Ph.D Students':
+        current=[(t,b) for t,b in members if 'Joined in' in b]
+        alumni=[(t,b) for t,b in members if 'Joined in' not in b]
+        for heading,identifier,roster in [('Current Ph.D. students','ph-d-students',current),('Ph.D. alumni','ph-d-alumni',alumni)]:
+            group_jumps.append((identifier,heading))
+            group_sections.append(section(heading,''.join(person(t,b,g) for t,b in roster),identifier))
+    else:
+        group_jumps.append((slug(g),g))
+        group_sections.append(section(g,''.join(person(t,b,g) for t,b in members)))
+page('group.html','Research group','Principal investigator, Ph.D. students, postdoctoral fellows, thesis students, and research interns. Dates and affiliations follow the IISER group directory.',jumps(group_jumps)+pi_section+''.join(group_sections))
+
 
 # Course pages retain full syllabi, timetables, assignments, and resource links.
 for source,dest in COURSES.items():
@@ -234,4 +284,4 @@ for name,(title,subtitle,body,category) in PAGES.items():
     (ROOT/name).write_text('\n'.join(line.rstrip() for line in document.splitlines())+'\n')
 (ROOT/'search-index.js').write_text('window.SEARCH_INDEX = '+json.dumps(INDEX,ensure_ascii=False).replace('</','<\\/')+';\n')
 print(f'Built {len(PAGES)} pages with {len(INDEX)} searchable entries.')
-print('Publications:',{k:len(v) for k,v in pubgroups.items()}, 'People:',sum(map(len,groups.values())))
+print('Publications:',{k:len(v) for k,v in pubgroups.items()}, 'People:',1+sum(map(len,groups.values())))

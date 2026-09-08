@@ -55,7 +55,18 @@
   const search = createSiteSearch(data);
   const publicationFilters = document.querySelector('.publication-filters');
   if (publicationFilters) {
-    const type = document.querySelector('#publication-type');
+    let type = 'journal';
+    const tablist = document.querySelector('.publication-tabs');
+    const tabs = [...tablist.querySelectorAll('a')];
+    tablist.setAttribute('role', 'tablist');
+    for (const tab of tabs) {
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', tab.hash.slice(1));
+      const panel = document.getElementById(tab.hash.slice(1));
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', tab.id);
+      panel.tabIndex = 0;
+    }
     const year = document.querySelector('#publication-year');
     const query = document.querySelector('#publication-query');
     const topicButtons = [...publicationFilters.querySelectorAll('[data-topic]')];
@@ -65,7 +76,9 @@
       const params = new URLSearchParams(location.search);
       const requestedTopic = params.get('topic');
       topic = topicButtons.some(button => button.dataset.topic === requestedTopic) ? requestedTopic : 'all';
-      type.value = params.get('type') || 'all'; if (!type.value) type.value = 'all';
+      type = params.get('type') === 'general' ? 'general' : 'journal';
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) type = target.closest('#secgeneral') ? 'general' : 'journal';
       year.value = params.get('year') || 'all'; if (!year.value) year.value = 'all';
       query.value = params.get('q') || '';
     }
@@ -74,31 +87,52 @@
       const matches = q ? new Set(search(q).filter(item => item.url.startsWith('pubs.html#')).map(item => item.url.split('#')[1])) : null;
       let visible = 0;
       for (const article of articles) {
-        article.hidden = !((type.value === 'all' || article.dataset.kind === type.value)
+        article.hidden = !((article.dataset.kind === type)
           && (year.value === 'all' || article.dataset.year === year.value)
-          && (topic === 'all' || article.dataset.topics.split(' ').includes(topic))
+          && (type === 'general' || topic === 'all' || article.dataset.topics.split(' ').includes(topic))
           && (!matches || matches.has(article.id)));
         if (!article.hidden) visible++;
       }
-      for (const section of document.querySelectorAll('.content-section')) {
-        section.hidden = !section.querySelector('[data-publication]:not([hidden])');
-        document.querySelector(`.jump-links a[href="#${section.id}"]`).hidden = section.hidden;
+      for (const tab of tabs) {
+        const selected = tab.dataset.kind === type;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById(tab.hash.slice(1)).hidden = !selected;
       }
+      publicationFilters.querySelector('.topic-filters').hidden = type === 'general';
       for (const button of topicButtons) button.setAttribute('aria-pressed', String(button.dataset.topic === topic));
       document.querySelector('#publication-empty').hidden = visible !== 0;
       document.querySelector('#publication-status').textContent = `${visible} matching articles`;
       const url = new URL(location.href);
-      for (const [key, value] of [['topic', topic], ['type', type.value], ['year', year.value], ['q', q]]) {
+      for (const [key, value] of [['topic', topic], ['type', type], ['year', year.value], ['q', q]]) {
         if (value && value !== 'all') url.searchParams.set(key, value); else url.searchParams.delete(key);
       }
       history.replaceState(null, '', url);
     }
     for (const button of topicButtons) button.addEventListener('click', () => {topic = button.dataset.topic; filterPublications();});
-    type.addEventListener('change', filterPublications);
+    function selectTab(tab) {
+      type = tab.dataset.kind;
+      const url = new URL(location.href); url.hash = ''; history.replaceState(null, '', url);
+      filterPublications();
+    }
+    for (const tab of tabs) {
+      tab.addEventListener('click', event => {event.preventDefault(); selectTab(tab);});
+      tab.addEventListener('keydown', event => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        const next = event.key === 'Home' ? tabs[0] : event.key === 'End' ? tabs[1] : tabs[1 - tabs.indexOf(tab)];
+        next.focus(); selectTab(next);
+      });
+    }
+    window.addEventListener('hashchange', () => {
+      readPublicationURL(); filterPublications();
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) target.scrollIntoView({block:'start'});
+    });
     year.addEventListener('change', filterPublications);
     query.addEventListener('input', () => {clearTimeout(timer);timer = setTimeout(filterPublications, 100);});
     document.querySelector('#publication-reset').addEventListener('click', () => {
-      clearTimeout(timer);topic = 'all';type.value = 'all';year.value = 'all';query.value = '';filterPublications();
+      clearTimeout(timer);topic = 'all';year.value = 'all';query.value = '';filterPublications();
     });
     window.addEventListener('popstate', () => {readPublicationURL();filterPublications();});
     readPublicationURL(); filterPublications(); publicationFilters.hidden = false;

@@ -16,16 +16,16 @@ for name,s in pages.items():
     ids=[x['id'] for x in s.select('[id]')]
     if len(ids)!=len(set(ids)):errors.append(f'{name}: duplicate IDs')
     assert len(s.select('main'))==1 and len(s.select('h1'))==1,name
-    for a in s.select('a[href],script[src],link[href]'):check_link(name,a.get('href',a.get('src')))
+    for a in s.select('a[href],script[src],link[href],img[src]'):check_link(name,a.get('href',a.get('src')))
 index=json.loads((root/'search-index.js').read_text().split(' = ',1)[1].rstrip(';\n'))
 for item in index:check_link('search.html',item['url'])
 for name in pages:assert any(i['url']==name for i in index),name
-assert sum(i['category']=='People' and '#' in i['url'] for i in index)==38
+assert sum(i['category']=='People' and '#' in i['url'] for i in index)==39
 assert len(pages['pubs.html'].select('article'))==114
 assert 'Saranya Ray' in pages['group.html'].get_text()
 assert len(index)>800
 if errors:raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(pages)} pages, {len(index)} search entries, all local links/anchors, 114 publications, 38 people.')
+print(f'PASS: {len(pages)} pages, {len(index)} search entries, all local links/anchors, 114 publications, 39 people.')
 # Topic assignments and research references share the same maintained catalog.
 topics=json.loads((root/'content/research-topics.json').read_text())
 research_papers={a['id'] for a in pages['pubs.html'].select('#secjournals [data-publication]')}
